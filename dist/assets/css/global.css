@@ -1,5 +1,8 @@
 body {
     color: #fff;
+    font-family: "living_by_numbersregular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .d-f {
@@ -78,4 +81,12 @@ body {
     .gtc-4 {
         grid-template-columns: 1fr;
     }
+}
+
+.no-copy {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

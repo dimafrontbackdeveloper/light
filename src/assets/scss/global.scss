@@ -1,81 +1,147 @@
 @import './mixins';
 @import './variables';
 
-body{
-   color:#fff;
-
+body {
+   color: #fff;
+   font-family: 'living_by_numbersregular',sans-serif;
+   font-style: normal;
+   font-weight: 400;
 }
 
-.d-f{
+.d-f {
    display: flex;
 }
 
-.d-g{
+.d-g {
    display: grid;
 }
 
-.jc-sb{
+.jc-sb {
    justify-content: space-between;
 }
 
-.jc-c{
+.jc-c {
    justify-content: center;
 }
+.jc-s {
+   justify-content: start;
+}
+.jc-e {
+   justify-content: end;
+}
 
-.ai-c{
+.ai-c {
    align-items: center;
 }
 
-.fd-c{
-   flex-direction:column;
+.fd-c {
+   flex-direction: column;
 }
 
-.fw-w{
+.fw-w {
    flex-wrap: wrap;
 }
 
 
-.ta-c{
+.ta-c {
    text-align: center;
 }
 
-.ta-e{
+.ta-e {
    text-align: end;
 }
 
-.gtc-2{
-   grid-template-columns: repeat(2,1fr);
+.gtc-2 {
+   grid-template-columns: repeat(2, 1fr);
 
-   @include breakpoint(768px){
+   @include breakpoint(768px) {
       grid-template-columns: 1fr;
    }
 }
 
-.gtc-3{
-   grid-template-columns: repeat(3,1fr);
+.gtc-3 {
+   grid-template-columns: repeat(3, 1fr);
 
-   @include breakpoint(768px){
+   @include breakpoint(768px) {
       grid-template-columns: 1fr;
    }
 }
 
-.gtc-4{
-   grid-template-columns: repeat(4,1fr);
+.gtc-4 {
+   grid-template-columns: repeat(4, 1fr);
 
-   @include breakpoint(768px){
-      grid-template-columns: repeat(2,1fr);
+   @include breakpoint(768px) {
+      grid-template-columns: repeat(2, 1fr);
    }
 
-   @include breakpoint(425px){
+   @include breakpoint(425px) {
       grid-template-columns: 1fr;
    }
 }
 
-.no-copy{
+.no-copy {
    -webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+.soc {
+   @media screen and (max-width: 768px) {
+      display: none;
+   }
+
+   // .soc __container
+
+   &__container {
+      max-width: 530px;
+      margin: 0 auto;
+      padding: 0px 10px;
+      transform: translateX(-60px);
+
+      @media screen and (max-width: 1024px) {
+         max-width: 768px;
+         margin: 0 auto;
+         transform: translateX(0px);
+      }
+
+      @media screen and (max-width: 768px) {
+         max-width: 425px;
+         margin: 0 auto;
+      }
+
+      @media screen and (max-width: 425px) {
+         max-width: none;
+         margin: 0 auto;
+      }
+   }
+
+   // .soc __row
+
+   &__row {}
+
+   // .soc __column
+
+   &__column {
+      transition: 0.2s;
+      flex: 0 0 33%;
+
+      &:hover {
+         transform: scale(105%);
+      }
+
+      a {
+         display: block;
+
+         @include breakpoint(1024px) {
+            flex: 0 0 110px;
+         }
+
+         @include breakpoint(768px) {
+            flex: 0 0 80px;
+         }
+      }
+   }
 }
