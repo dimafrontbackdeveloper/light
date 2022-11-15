@@ -322,6 +322,59 @@ body {
     }
 }
 
+.soc__row:first-child {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+}
+
+.soc__row:first-child .soc__column:first-child {
+    -webkit-transform: translateX(20%);
+    transform: translateX(20%);
+}
+
+@media screen and (max-width: 1024px) {
+    .soc__row:first-child .soc__column:first-child {
+        -webkit-transform: translateX(10%);
+        transform: translateX(10%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .soc__row:first-child .soc__column:first-child {
+        -webkit-transform: translateX(20%);
+        transform: translateX(20%);
+    }
+}
+
+.soc__row:first-child .soc__column:last-child {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+
+@media screen and (max-width: 1024px) {
+    .soc__row:first-child .soc__column:last-child {
+        -webkit-transform: translateX(-10%);
+        transform: translateX(-10%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .soc__row:first-child .soc__column:last-child {
+        -webkit-transform: translateX(-20%);
+        transform: translateX(-20%);
+    }
+}
+
+.soc__row:last-child .soc__column:first-child {
+    -webkit-transform: translateX(40%);
+    transform: translateX(40%);
+}
+
+.soc__row:last-child .soc__column:last-child {
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
+}
+
 .soc__column {
     transition: 0.2s;
     -ms-flex: 0 0 33%;
@@ -716,6 +769,16 @@ body {
     }
 }
 
+.header__nav-item {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header__nav-item {
+        display: block;
+    }
+}
+
 .header__text-right {
     position: relative;
     z-index: 11;
@@ -818,8 +881,8 @@ body {
 @media screen and (max-width: 768px) {
     .intro__row {
         grid-template-columns: repeat(1, 1fr);
-        gap: 80px;
-        margin-bottom: 70px;
+        gap: 60px;
+        margin-bottom: 20px;
     }
 }
 
@@ -945,6 +1008,7 @@ body {
 
 .intro .lamp {
     position: absolute;
+    z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -956,7 +1020,6 @@ body {
 .intro .lamp1 {
     top: 0;
     left: 5%;
-    z-index: 333;
     width: 27px;
     height: 105px;
 }
@@ -1059,7 +1122,6 @@ body {
 .intro .lamp2 {
     top: 40px;
     left: 17%;
-    z-index: 1;
     width: 142px;
     height: 102px;
 }
@@ -1122,7 +1184,6 @@ body {
 .intro .lamp3 {
     top: 20px;
     left: 33%;
-    z-index: 333;
     width: 36px;
     height: 133px;
 }
@@ -1232,7 +1293,6 @@ body {
 .intro .lamp4 {
     top: 680px;
     right: 35%;
-    z-index: 333;
     width: 36px;
     height: 133px;
 }
@@ -1337,4 +1397,173 @@ body {
     80%, 100% {
         opacity: 0.1;
     }
+}
+
+.intro .lamp-type2 {
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .intro .lamp-type2 {
+        display: block;
+    }
+}
+
+.intro .lamp-type2-1 {
+    top: 0;
+    left: 0;
+}
+
+.intro .lamp-type2-1 img:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+.intro .lamp-type2-1 img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-animation: blick1 5s infinite ease-in-out;
+    animation: blick1 5s infinite ease-in-out;
+}
+
+.intro .lamp-type2-2 {
+    top: 250px;
+    right: 0;
+}
+
+.intro .lamp-type2-2 img:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+.intro .lamp-type2-2 img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-transform: translate(10px, 10px);
+    transform: translate(10px, 10px);
+    -webkit-animation: blick3 8s infinite ease-in-out;
+    animation: blick3 8s infinite ease-in-out;
+}
+
+.intro .lamp-type2-3 {
+    top: 500px;
+    left: 0;
+}
+
+.intro .lamp-type2-3 img:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+.intro .lamp-type2-3 img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-animation: blick2 8s infinite ease-in-out;
+    animation: blick2 8s infinite ease-in-out;
+}
+
+.intro .stone {
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .intro .stone {
+        display: block;
+    }
+}
+
+.intro .stone1 {
+    top: 0;
+    left: 0;
+}
+
+.intro .stone2 {
+    top: 0;
+    right: 0;
+}
+
+.intro .stone3 {
+    top: 200px;
+    left: 0;
+}
+
+.intro .stone4 {
+    top: 250px;
+    right: 0;
+}
+
+.intro .stone5 {
+    top: 280px;
+    left: 0;
+}
+
+.intro .stone6 {
+    top: 280px;
+    right: 0;
+}
+
+.intro .stone7 {
+    top: 380px;
+    right: 0;
+}
+
+.intro .stone8 {
+    top: 400px;
+    left: 0;
+}
+
+.intro .stone9 {
+    top: 450px;
+    right: 0;
+}
+
+.intro .stone10 {
+    top: 500px;
+    left: 0;
+}
+
+.intro .stone11 {
+    top: 600px;
+    right: 0;
+}
+
+.intro .stone12 {
+    top: 650px;
+    left: 0;
+}
+
+.intro .stone13 {
+    top: 700px;
+    right: 0;
+}
+
+.intro .stone14 {
+    bottom: 0;
+    left: 0;
+}
+
+.intro .stone15 {
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateX(30%);
+    transform: translateX(30%);
+}
+
+.intro .stone16 {
+    bottom: 0;
+    right: 0;
 }

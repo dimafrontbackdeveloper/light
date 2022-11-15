@@ -264,12 +264,17 @@
       }
    }
 
+   // .header__nav
 
-
-   nav {
+   &__nav{
       position: relative;
       z-index: 11;
       margin-bottom: 30px;
+      justify-content: center;
+
+      @include breakpoint(768px) {
+         justify-content: space-between;
+      }
 
       @include breakpoint(425px) {
          margin-bottom: 140px;
@@ -327,13 +332,6 @@
          }
 
       }
-
-   }
-
-   // .header__nav
-
-   &__nav{
-     
    }
 
    // .header__nav-item
@@ -407,12 +405,11 @@
       }
 
       @include breakpoint(768px) {
-         min-height: 980px;
+         min-height: auto;
+         padding-bottom: 50px;
       }
 
-      @include breakpoint(425px) {
-         min-height: 500px;
-      }
+
    }
 
    // // .intro__bg-details
