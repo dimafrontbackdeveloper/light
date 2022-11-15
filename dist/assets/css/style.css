@@ -399,8 +399,8 @@ body {
 
 @media screen and (max-width: 768px) {
     .soc__column a {
-        -ms-flex: 0 0 120px;
-        flex: 0 0 120px;
+        -ms-flex: 0 0 100px;
+        flex: 0 0 100px;
     }
 }
 
@@ -698,73 +698,82 @@ body {
     }
 }
 
-.header nav {
+.header__nav {
     position: relative;
     z-index: 11;
     margin-bottom: 30px;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .header__nav {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 425px) {
-    .header nav {
+    .header__nav {
         margin-bottom: 140px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .header nav ul {
+    .header__nav ul {
         display: none;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 }
 
-.header nav ul li {
+.header__nav ul li {
     margin-right: 70px;
     transition: 0.2s;
 }
 
-.header nav ul li:hover {
+.header__nav ul li:hover {
     -webkit-transform: scale(105%);
     transform: scale(105%);
 }
 
-.header nav ul li:last-child {
+.header__nav ul li:last-child {
     margin-right: 0px;
 }
 
 @media screen and (max-width: 768px) {
-    .header nav ul li {
+    .header__nav ul li {
         -ms-flex: 0 1 100%;
         flex: 0 1 100%;
         margin-right: 0px;
         margin-bottom: 10px;
     }
 
-    .header nav ul li:last-child {
+    .header__nav ul li:last-child {
         margin-bottom: 0px;
     }
 }
 
-.header nav ul li a {
+.header__nav ul li a {
     color: inherit;
 }
 
-.header nav ul li img {
+.header__nav ul li img {
     margin-right: 20px;
 }
 
-.header nav ul li img:last-child {
+.header__nav ul li img:last-child {
     margin-right: 0px;
 }
 
 @media screen and (max-width: 1024px) {
-    .header nav ul li img {
+    .header__nav ul li img {
         width: 60px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .header nav ul li img {
+    .header__nav ul li img {
         width: 40px;
     }
 }
@@ -831,13 +840,8 @@ body {
 
 @media screen and (max-width: 768px) {
     .intro__wrapper {
-        min-height: 980px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .intro__wrapper {
-        min-height: 500px;
+        min-height: auto;
+        padding-bottom: 50px;
     }
 }
 
