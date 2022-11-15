@@ -5,6 +5,12 @@ body {
     font-weight: 400;
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        background: #120B12;
+    }
+}
+
 .d-f {
     display: -ms-flexbox;
     display: flex;
@@ -22,6 +28,16 @@ body {
 .jc-c {
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.jc-s {
+    -ms-flex-pack: start;
+    justify-content: start;
+}
+
+.jc-e {
+    -ms-flex-pack: end;
+    justify-content: end;
 }
 
 .ai-c {
@@ -89,4 +105,64 @@ body {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+.soc__container {
+    max-width: 530px;
+    margin: 0 auto;
+    padding: 0px 10px;
+    -webkit-transform: translateX(-60px);
+    transform: translateX(-60px);
+}
+
+@media screen and (max-width: 1024px) {
+    .soc__container {
+        max-width: 768px;
+        margin: 0 auto;
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .soc__container {
+        max-width: 425px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .soc__container {
+        max-width: none;
+        margin: 0 auto;
+    }
+}
+
+.soc__column {
+    transition: 0.2s;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+}
+
+.soc__column:hover {
+    -webkit-transform: scale(105%);
+    transform: scale(105%);
+}
+
+.soc__column a {
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    .soc__column a {
+        -ms-flex: 0 0 110px;
+        flex: 0 0 110px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .soc__column a {
+        -ms-flex: 0 0 120px;
+        flex: 0 0 120px;
+    }
 }

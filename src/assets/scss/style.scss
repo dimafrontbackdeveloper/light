@@ -35,23 +35,23 @@
    padding-top: 60px;
    padding-right: 10px;
    padding-left: 10px;
-   min-height: 1233px;
+   height: 1233px;
    font-size: 50px;
    line-height: 51px;
 
    @include breakpoint(1024px) {
-      min-height: 900px;
-   padding-top: 40px;
+      height: 900px;
+      padding-top: 40px;
    }
 
    @include breakpoint(768px) {
-      min-height: 700px;
-   padding-top: 0px;
-
+      height: 600px;
+      padding-top: 20px;
    }
 
-
-
+   @include breakpoint(768px) {
+      height: 550px;
+   }
 
    // .header__bg
 
@@ -77,8 +77,8 @@
       }
 
       @include breakpoint(425px) {
-         width: 300px;
-         height: 150px;
+         width: 370px;
+         height: 100px;
       }
    }
 
@@ -100,8 +100,9 @@
       }
 
       @include breakpoint(425px) {
-         width: 350px;
-         height: 250px;
+         width: 250px;
+         height: 200px;
+         margin-right: -20px;
       }
    }
 
@@ -128,6 +129,7 @@
          width: 450px;
          height: 150px;
          bottom: 70px;
+         left: -200px;
       }
    }
 
@@ -151,9 +153,12 @@
       }
 
       @include breakpoint(425px) {
-         width: 300px;
-         height: 100px;
-         bottom: 100px;
+         // width: 300px;
+         // height: 100px;
+         // bottom: 100px;
+         width: 100%;
+         height: 150px;
+         bottom: 45px;
       }
    }
 
@@ -194,13 +199,13 @@
       }
 
       @include breakpoint(768px) {
-         height: 250px;
+         height: 220px;
          bottom: 230px;
       }
 
       @include breakpoint(425px) {
-         height: 150px;
-         bottom: 150px;
+         width:100%;
+         bottom: 110px;
       }
    }
 
@@ -259,74 +264,65 @@
       }
    }
 
+
+
    nav {
       position: relative;
       z-index: 11;
       margin-bottom: 30px;
 
-      @include breakpoint(768px) {
-         margin-bottom: 30px;
-         display: grid;
-         grid-template-columns: repeat(2,1fr);
-         column-gap: 20px;
+      @include breakpoint(425px) {
+         margin-bottom: 140px;
       }
 
       ul {
-         &:first-child {
-            @include breakpoint(768px) {
-               flex-wrap: wrap;
+         @include breakpoint(768px) {
+            display: none;
+            flex-wrap: wrap;
+
+         }
+
+         li {
+            margin-right: 70px;
+            transition: 0.2s;
+
+
+            &:hover {
+               transform: scale(105%);
             }
 
-            li {
-               margin-right: 70px;
-               transition: 0.2s;
+            &:last-child {
+               margin-right: 0px;
+            }
 
+            @include breakpoint(768px) {
+               flex: 0 1 100%;
+               margin-right: 0px;
+               margin-bottom: 10px;
 
-               &:hover {
-                  transform: scale(105%);
+               &:last-child {
+                  margin-bottom: 0px;
                }
+            }
+
+            a {
+               color: inherit;
+            }
+
+            img {
+               margin-right: 20px;
 
                &:last-child {
                   margin-right: 0px;
                }
 
+               @include breakpoint(1024px) {
+                  width: 60px;
+               }
+
                @include breakpoint(768px) {
-                  flex: 0 1 100%;
-                  margin-right: 0px;
-                  margin-bottom: 10px;
-
-                  &:last-child {
-                     margin-bottom: 0px;
-                  }
+                  width: 40px;
                }
-
-               a {
-                  color: inherit;
-               }
-
-               img {
-                  margin-right: 20px;
-
-                  &:last-child {
-                     margin-right: 0px;
-                  }
-
-                  @include breakpoint(1024px) {
-                     width: 60px;
-                  }
-
-                  @include breakpoint(768px) {
-                     width: 40px;
-                  }
-               }
-            }
-         }
-
-         &:last-child{
-            display: none;
-            
-            @include breakpoint(768px){
-               display: block;
             }
          }
 
@@ -334,7 +330,32 @@
 
    }
 
+   // .header__nav
 
+   &__nav{
+     
+   }
+
+   // .header__nav-item
+
+   &__nav-item{
+      display: none;
+
+      @include breakpoint(768px){
+         display: block;
+      }
+   }
+   // .header__nav-item-left
+
+   &__nav-item-left{
+      
+   }
+
+   // .header__nav-item-right
+
+   &__nav-item-right{
+
+   }
 
    // .header__text-right
 
@@ -344,14 +365,9 @@
       text-transform: uppercase;
       justify-content: end;
 
-      @include breakpoint(768px) {
-         justify-content: center;
-      }
-
       img {
-         @include breakpoint(768px) {
-            width: 250px;
-         }
+         @include adaptiv-value('width',275,105,0);
+         @include adaptiv-value('height',70,50,0);
       }
    }
 }
@@ -374,13 +390,9 @@
       }
 
       @include breakpoint(768px) {
-         min-height: 1800px;
+         display: none;
       }
 
-      @include breakpoint(425px) {
-         min-height: 1000px;
-         top: 280px;
-      }
    }
 
    // .intro__wrapper
@@ -419,6 +431,8 @@
 
       @include breakpoint(768px) {
          height: 980px;
+
+            display: none;
       }
 
       @include breakpoint(425px) {
@@ -435,6 +449,12 @@
 
    &__row {
       grid-template-columns: repeat(2, 1fr);
+      
+      @include breakpoint(768px) {
+         grid-template-columns: repeat(1, 1fr);
+         gap: 60px;
+         margin-bottom: 20px;
+      }
    }
 
    // .intro__column
@@ -455,6 +475,12 @@
          font-size: 25px;
          line-height: 25px;
          max-width: 250px;
+         grid-column: auto !important;
+         grid-row: auto !important;
+         padding: 0px !important;
+      text-align: center;
+      max-width: 200px;
+      margin: 0 auto !important;
       }
 
       @include breakpoint(425px) {
@@ -533,12 +559,16 @@
 
    .lamp {
       position: absolute;
+      z-index: 1;
+
+      @include breakpoint(768px){
+         display: none;
+      }
    }
 
    .lamp1 {
       top: 0;
       left: 5%;
-      z-index: 333;
       width: 27px;
       height: 105px;
 
@@ -586,35 +616,32 @@
                transform: scale(700%) translate(0px, 1.5px);
             }
          }
-
-         @keyframes blick1 {
-
-            0%,
-            30% {
-               opacity: 0.1;
-            }
-
-            30%,
-            50% {
-               opacity: 1;
-            }
-
-            50%,
-            80% {
-               opacity: 1;
-            }
-
-            100% {
-               opacity: 0.1;
-            }
-         }
       }
    }
+   @keyframes blick1 {
 
+      0%,
+      30% {
+         opacity: 0.1;
+      }
+
+      30%,
+      50% {
+         opacity: 1;
+      }
+
+      50%,
+      80% {
+         opacity: 1;
+      }
+
+      100% {
+         opacity: 0.1;
+      }
+   }
    .lamp2 {
       top: 40px;
       left: 17%;
-      z-index: 1;
       width: 142px;
       height: 102px;
 
@@ -634,35 +661,34 @@
             animation: blick2 8s infinite ease-in-out;
          }
 
-         @keyframes blick2 {
-
-            0%,
-            10% {
-               opacity: 0.1;
-            }
-
-            10%,
-            40% {
-               opacity: 1;
-            }
-
-            40%,
-            70% {
-               opacity: 1;
-            }
-
-            70%,
-            100% {
-               opacity: 0.1;
-            }
-         }
+       
       }
    }
+   @keyframes blick2 {
 
+      0%,
+      10% {
+         opacity: 0.1;
+      }
+
+      10%,
+      40% {
+         opacity: 1;
+      }
+
+      40%,
+      70% {
+         opacity: 1;
+      }
+
+      70%,
+      100% {
+         opacity: 0.1;
+      }
+   }
    .lamp3 {
       top: 20px;
       left: 33%;
-      z-index: 333;
       width: 36px;
       height: 133px;
 
@@ -714,34 +740,33 @@
             }
          }
 
-         @keyframes blick3 {
-
-            0%,
-            30% {
-               opacity: 0.1;
-            }
-
-            30%,
-            50% {
-               opacity: 1;
-            }
-
-            50%,
-            80% {
-               opacity: 1;
-            }
-
-            100% {
-               opacity: 0.1;
-            }
-         }
+      
       }
    }
+   @keyframes blick3 {
 
+      0%,
+      30% {
+         opacity: 0.1;
+      }
+
+      30%,
+      50% {
+         opacity: 1;
+      }
+
+      50%,
+      80% {
+         opacity: 1;
+      }
+
+      100% {
+         opacity: 0.1;
+      }
+   }
    .lamp4 {
       top: 680px;
       right: 35%;
-      z-index: 333;
       width: 36px;
       height: 133px;
 
@@ -793,28 +818,196 @@
             }
          }
 
-         @keyframes blick4 {
+   
+      }
+   }
+   @keyframes blick4 {
 
-            0%,
-            10% {
-               opacity: 0.1;
-            }
+      0%,
+      10% {
+         opacity: 0.1;
+      }
 
-            10%,
-            30% {
-               opacity: 1;
-            }
+      10%,
+      30% {
+         opacity: 1;
+      }
 
-            30%,
-            80% {
-               opacity: 1;
-            }
+      30%,
+      80% {
+         opacity: 1;
+      }
 
-            80%,
-            100% {
-               opacity: 0.1;
-            }
+      80%,
+      100% {
+         opacity: 0.1;
+      }
+   }
+   .lamp-type2{
+      position: absolute;
+      display: none;
+      z-index: 1;
+
+      @include breakpoint(768px){
+         display: block;
+      }
+   }
+
+   .lamp-type2-1{
+      top: 0;
+      left: 0;
+
+      img{
+         &:first-child{
+            position: relative;
+            z-index: 2;
+         }
+
+         &:last-child{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transform: translateY(10px);
+            animation: blick1 5s infinite ease-in-out;
          }
       }
    }
+
+   .lamp-type2-2{
+      top: 250px;
+      right: 0;
+
+      img{
+         &:first-child{
+            position: relative;
+            z-index: 2;
+         }
+
+         &:last-child{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transform: translate(10px, 10px);
+            animation: blick3 8s infinite ease-in-out;
+         }
+      }
+   }
+
+   .lamp-type2-3{
+      top: 500px;
+      left: 0;
+
+      img{
+         &:first-child{
+            position: relative;
+            z-index: 2;
+         }
+
+         &:last-child{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transform: translateY(10px);
+            animation: blick2 8s infinite ease-in-out;
+         }
+      }
+   }
+
+   .stone{
+      position: absolute;
+      z-index: 1;
+      display: none;
+      
+      @include breakpoint(768px){
+         display: block;
+      }
+   }
+
+   .stone1{
+      top: 0;
+      left: 0;
+   }
+
+   .stone2{
+      top: 0;
+      right: 0;
+   }
+
+   .stone3{
+      top: 200px;
+      left: 0;
+   }
+
+   .stone4{
+      top: 250px;
+      right: 0;
+   }
+   
+
+   .stone5{
+      top: 280px;
+      left: 0;
+   }
+
+   .stone6{
+      top: 280px;
+      right: 0;
+   }
+
+   .stone7{
+      top: 380px;
+      right: 0;
+   }
+
+   .stone8{
+      top: 400px;
+      left: 0;
+   }
+   
+
+   .stone9{
+      top: 450px;
+      right: 0;
+   }
+
+   .stone10{
+      top: 500px;
+      left: 0;
+   }
+
+   .stone11{
+      top: 600px;
+      right: 0;
+   }
+
+   .stone12{
+      top: 650px;
+      left: 0;
+   }
+
+   .stone13{
+      top: 700px;
+      right: 0;
+   }
+
+   .stone14{
+      bottom: 0;
+      left: 0;
+   }
+
+   .stone15{
+      bottom: 0;
+      left: 0;
+      transform: translateX(30%);
+   }
+
+   .stone16{
+      bottom: 0;
+      right: 0;
+   }
+   
+
 }

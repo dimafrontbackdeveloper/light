@@ -6,6 +6,10 @@ body {
    font-family: 'living_by_numbersregular',sans-serif;
    font-style: normal;
    font-weight: 400;
+   
+   @include breakpoint(768px){
+      background: #120B12;
+   }
 }
 
 .d-f {
@@ -89,10 +93,6 @@ body {
 }
 
 .soc {
-   @media screen and (max-width: 768px) {
-      display: none;
-   }
-
    // .soc __container
 
    &__container {
@@ -120,7 +120,48 @@ body {
 
    // .soc __row
 
-   &__row {}
+   &__row {
+      &:first-child{
+         transform: translateY(60px);
+
+         .soc__column{
+            &:first-child{
+               transform: translateX(20%);
+
+               @include breakpoint(1024px){
+                  transform: translateX(10%);
+               }
+
+               @include breakpoint(768px){
+                  transform: translateX(20%);
+               }
+            }
+      
+            &:last-child{
+               transform: translateX(-20%);
+
+               @include breakpoint(1024px){
+                  transform: translateX(-10%);
+               }
+
+               @include breakpoint(768px){
+                  transform: translateX(-20%);
+               }
+            }
+         }
+      }
+      &:last-child{
+         .soc__column{
+            &:first-child{
+               transform: translateX(40%);
+            }
+      
+            &:last-child{
+               transform: translateX(-40%);
+            }
+         }
+      }
+   }
 
    // .soc __column
 
@@ -140,7 +181,7 @@ body {
          }
 
          @include breakpoint(768px) {
-            flex: 0 0 80px;
+            flex: 0 0 120px;
          }
       }
    }
