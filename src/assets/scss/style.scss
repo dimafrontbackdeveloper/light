@@ -38,6 +38,13 @@
    height: 1233px;
    font-size: 50px;
    line-height: 51px;
+   // @include adaptiv-value('height',1080,590,0);
+   height: 1200px;
+
+   @include breakpoint(1440px) {
+      height: 1000px;
+      padding-top: 40px;
+   }
 
    @include breakpoint(1024px) {
       height: 900px;
@@ -50,7 +57,7 @@
    }
 
    @include breakpoint(425px) {
-      height: 550px;
+      height: 590px;
    }
 
 
@@ -59,191 +66,319 @@
 
    &__bg {
       position: absolute;
+      max-width: none;
    }
 
+   // &__bg1 {
+   //    width: 1350px;
+   //    height: 500px;
+   //    bottom: 5px;
+   //    left: 0;
+   //    z-index: 10;
+
+   //    @include breakpoint(1024px) {
+   //       width: 750px;
+   //       height: 300px;
+   //    }
+
+   //    @include breakpoint(768px) {
+   //       width: 500px;
+   //       height: 200px;
+   //    }
+
+   //    @include breakpoint(425px) {
+   //       width: 370px;
+   //       height: 100px;
+   //    }
+   // }
+
+   // &__bg2 {
+   //    width: 920px;
+   //    height: 972px;
+   //    bottom: 36px;
+   //    right: 0;
+   //    z-index: 9;
+
+   //    @include breakpoint(1024px) {
+   //       width: 750px;
+   //       height: 600px;
+   //    }
+
+   //    @include breakpoint(768px) {
+   //       width: 550px;
+   //       height: 400px;
+   //    }
+
+   //    @include breakpoint(425px) {
+   //       width: 250px;
+   //       height: 200px;
+   //       margin-right: -20px;
+   //    }
+   // }
+
+   // &__bg3 {
+   //    width: 1455px;
+   //    height: 462px;
+   //    bottom: 293px;
+   //    left: 0;
+   //    z-index: 8;
+
+   //    @include breakpoint(1024px) {
+   //       width: 800px;
+   //       height: 300px;
+   //       bottom: 180px;
+   //    }
+
+   //    @include breakpoint(768px) {
+   //       width: 550px;
+   //       height: 250px;
+   //       bottom: 100px;
+   //    }
+
+   //    @include breakpoint(425px) {
+   //       width: 450px;
+   //       height: 150px;
+   //       bottom: 70px;
+   //       left: -200px;
+   //    }
+   // }
+
+   // &__bg4 {
+   //    width: 1364px;
+   //    height: 372px;
+   //    bottom: 330px;
+   //    right: 0;
+   //    z-index: 7;
+
+   //    @include breakpoint(1024px) {
+   //       width: 800px;
+   //       height: 300px;
+   //       bottom: 180px;
+   //    }
+
+   //    @include breakpoint(768px) {
+   //       width: 600px;
+   //       height: 200px;
+   //       bottom: 120px;
+   //    }
+
+   //    @include breakpoint(425px) {
+   //       // width: 300px;
+   //       // height: 100px;
+   //       // bottom: 100px;
+   //       width: 100%;
+   //       height: 150px;
+   //       bottom: 45px;
+   //    }
+   // }
+
+   // &__bg5 {
+   //    width: 100%;
+   //    height: 765px;
+   //    bottom: 139px;
+   //    left: 0;
+   //    z-index: 6;
+   //    animation: header-an 3s linear infinite;
+
+   //    @include breakpoint(1024px) {
+   //       height: 400px;
+   //       bottom: 180px;
+   //    }
+
+   //    @include breakpoint(768px) {
+   //       height: 180px;
+   //       bottom: 180px;
+   //    }
+
+   //    @include breakpoint(425px) {
+   //       height: 200px;
+   //       bottom: 60px;
+   //    }
+   // }
+
+   // // &__bg6 {
+   // //    width: 100%;
+   // //    height: 565px;
+   // //    bottom: 530px;
+   // //    left: 0;
+   // //    z-index: 5;
+
+   // //    @include breakpoint(1024px) {
+   // //       height: 400px;
+   // //       bottom: 330px;
+   // //    }
+
+   // //    @include breakpoint(768px) {
+   // //       height: 220px;
+   // //       bottom: 230px;
+   // //    }
+
+   // //    @include breakpoint(425px) {
+   // //       width:100%;
+   // //       bottom: 110px;
+   // //    }
+   // // }
+
+   // &__bg7 {
+   //    width: 100%;
+   //    height: 1080px;
+   //    top: -100px;
+   //    left: 0;
+   //    z-index: 4;
+   //    animation: header-an 5s linear infinite;
+
+   //    @include breakpoint(1024px) {
+   //       height: 100%;
+   //    }
+   // }
+
+   // @keyframes header-an {
+   //    60% {
+   //       opacity: 0;
+   //    }
+
+   //    100% {
+   //       opacity: 1;
+   //    }
+   // }
+
+   // &__bg8 {
+   //    width: 100%;
+   //    height: 563px;
+   //    top: 0;
+   //    left: 0;
+   //    z-index: 3;
+
+   //    @include breakpoint(1024px) {
+   //       height: 363px;
+   //    }
+
+   //    @include breakpoint(768px) {
+   //       height: 300px;
+   //    }
+
+   //    @include breakpoint(425px) {
+   //       height: 200px;
+   //    }
+   // }
+
+   // &__bg9 {
+   //    width: 100%;
+   //    height: 1080px;
+   //    top: -100px;
+   //    left: 0;
+   //    z-index: 2;
+
+   //    @include breakpoint(1024px) {
+   //       height: 100%;
+   //    }
+   // }
+
    &__bg1 {
-      width: 1350px;
-      height: 500px;
-      bottom: 5px;
+      @include adaptiv-value('width',1350,350,0);
+      @include adaptiv-value('height',498,100,0);
+      bottom: 0;
       left: 0;
       z-index: 10;
-
-      @include breakpoint(1024px) {
-         width: 750px;
-         height: 300px;
-      }
-
-      @include breakpoint(768px) {
-         width: 500px;
-         height: 200px;
-      }
-
-      @include breakpoint(425px) {
-         width: 370px;
-         height: 100px;
-      }
    }
 
    &__bg2 {
-      width: 920px;
-      height: 972px;
+      @include adaptiv-value('width',1160,270,0);
+      @include adaptiv-value('height',972,220,0);
       bottom: 36px;
       right: 0;
       z-index: 9;
-
-      @include breakpoint(1024px) {
-         width: 750px;
-         height: 600px;
+      
+      @include breakpoint(768px){
+         right: -50px;
+         bottom: 20px;
       }
-
-      @include breakpoint(768px) {
-         width: 550px;
-         height: 400px;
-      }
-
-      @include breakpoint(425px) {
-         width: 250px;
-         height: 200px;
-         margin-right: -20px;
-      }
+  
    }
 
    &__bg3 {
-      width: 1455px;
-      height: 462px;
-      bottom: 293px;
+      @include adaptiv-value('width',1920,665,0);
+      @include adaptiv-value('height',529,150,0);
+      @include adaptiv-value('bottom',205,40,0);
       left: 0;
       z-index: 8;
 
-      @include breakpoint(1024px) {
-         width: 800px;
-         height: 300px;
-         bottom: 180px;
+      @include breakpoint(768px){
+         left: -350px;
+         @include adaptiv-value('bottom',250,70,0);
       }
 
-      @include breakpoint(768px) {
-         width: 550px;
-         height: 250px;
-         bottom: 100px;
+      @include breakpoint(425px){
+         left: -300px;
       }
-
-      @include breakpoint(425px) {
-         width: 450px;
-         height: 150px;
-         bottom: 70px;
-         left: -200px;
-      }
+ 
    }
 
    &__bg4 {
-      width: 1364px;
-      height: 372px;
-      bottom: 330px;
-      right: 0;
-      z-index: 7;
-
-      @include breakpoint(1024px) {
-         width: 800px;
-         height: 300px;
-         bottom: 180px;
+      @include adaptiv-value('width',1920,700,0);
+      @include adaptiv-value('height',416,150,0);
+      @include adaptiv-value('bottom',330,80,0);
+      z-index: 7;  
+      
+      @include breakpoint(768px){
+         left: -270px;
       }
 
-      @include breakpoint(768px) {
-         width: 600px;
-         height: 200px;
-         bottom: 120px;
-      }
-
-      @include breakpoint(425px) {
-         // width: 300px;
-         // height: 100px;
-         // bottom: 100px;
-         width: 100%;
-         height: 150px;
-         bottom: 45px;
+      @include breakpoint(425px){
+         left: -300px;
       }
    }
 
    &__bg5 {
-      width: 100%;
-      height: 765px;
+      @include adaptiv-value('width',1920,360,0);
+      @include adaptiv-value('height',764,200,0);
       bottom: 139px;
       left: 0;
       z-index: 6;
-      animation: header-an 3s linear infinite;
+      animation: header-an 3s linear infinite;  
 
-      @include breakpoint(1024px) {
-         height: 400px;
-         bottom: 180px;
-      }
-
-      @include breakpoint(768px) {
-         height: 180px;
-         bottom: 180px;
-      }
-
-      @include breakpoint(425px) {
-         height: 200px;
-         bottom: 60px;
+      @include breakpoint(768px){
+         bottom: 110px;
       }
    }
 
-   // &__bg6 {
-   //    width: 100%;
-   //    height: 565px;
-   //    bottom: 530px;
-   //    left: 0;
-   //    z-index: 5;
-
-   //    @include breakpoint(1024px) {
-   //       height: 400px;
-   //       bottom: 330px;
-   //    }
-
-   //    @include breakpoint(768px) {
-   //       height: 220px;
-   //       bottom: 230px;
-   //    }
-
-   //    @include breakpoint(425px) {
-   //       width:100%;
-   //       bottom: 110px;
-   //    }
-   // }
-
    &__bg6 {
-      width: 100%;
-      height:1200px ;
-      bottom: 0px;
+      @include adaptiv-value('width',1920,630,0);
+      @include adaptiv-value('height',707,220,0);
+      @include adaptiv-value('bottom',300,150,0);
       left: 0;
       z-index: 5;
 
-      @include breakpoint(1024px) {
-         height:800px;
-      }
-
-      @include breakpoint(768px) {
-         height:600px;
-      }
-
-      @include breakpoint(425px) {
-         width:100%;
-         height:370px;
-         bottom: -10px;
+      @include breakpoint(425px){
+         display: none;
       }
    }
 
+   // .header__mountains-mobile1
+
+   &__mountains-mobile{
+      display: none;
+      position: absolute;
+      z-index: 5;
+      @include adaptiv-value('bottom',300,120,0);
+      left: -130px;
+      max-width: 150%;
+
+      @include breakpoint(425px){
+         display: block;
+      }
+   }
+
+
+
    &__bg7 {
-      width: 100%;
-      height: 1080px;
-      top: -100px;
+      @include adaptiv-value('width',1920,500,0);
+      height: 100%;
+      top: -200px;
       left: 0;
       z-index: 4;
       animation: header-an 5s linear infinite;
 
-      @include breakpoint(1024px) {
-         height: 100%;
-      }
    }
 
    @keyframes header-an {
@@ -257,35 +392,21 @@
    }
 
    &__bg8 {
-      width: 100%;
-      height: 563px;
+      @include adaptiv-value('width',1920,870,0);
+      @include adaptiv-value('height',563,200,0);
       top: 0;
       left: 0;
       z-index: 3;
 
-      @include breakpoint(1024px) {
-         height: 363px;
-      }
-
-      @include breakpoint(768px) {
-         height: 300px;
-      }
-
-      @include breakpoint(425px) {
-         height: 200px;
-      }
    }
 
    &__bg9 {
-      width: 100%;
-      height: 1080px;
-      top: -100px;
+      @include adaptiv-value('width',1920,443,0);
+      height: 100%;
+      top: -200px;
       left: 0;
       z-index: 2;
 
-      @include breakpoint(1024px) {
-         height: 100%;
-      }
    }
 
    // .header__nav
@@ -293,16 +414,23 @@
    &__nav{
       position: relative;
       z-index: 11;
-      margin-bottom: 30px;
+      @include adaptiv-value('margin-bottom',30,800,0);
       justify-content: center;
+
+      @include breakpoint(1440px) {
+         @include adaptiv-value('margin-bottom',50,400,0);
+      }
+   
+      @include breakpoint(1024px) {
+      }
 
       @include breakpoint(768px) {
          justify-content: space-between;
-         margin-bottom: 80px;
+         @include adaptiv-value('margin-bottom',0,250,0);
       }
 
       @include breakpoint(425px) {
-         margin-bottom: 140px;
+         margin-bottom: 130px;
       }
 
       ul {
