@@ -3,12 +3,7 @@ body {
     font-family: "living_by_numbersregular", sans-serif;
     font-style: normal;
     font-weight: 400;
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        background: #120B12;
-    }
+    background: #120B12;
 }
 
 .d-f {
