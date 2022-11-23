@@ -1004,6 +1004,8 @@
          padding-bottom: 100px;
 
          @include breakpoint(1800px){
+         padding-bottom: 70px;
+         
          }
    
          @include breakpoint(1700px){
@@ -1028,6 +1030,7 @@
          }
    
          @include breakpoint(1100px){
+         padding-bottom: 40px;
          }
    
          @include breakpoint(1024px){
@@ -1643,6 +1646,19 @@
    // .footer__row
 
    &__row {
+      
+      @include breakpoint(1600px){
+         transform: translateX(-30px);
+      }
+      
+      @include breakpoint(1400px){
+      }
+
+      @include breakpoint(1024px){
+         transform: translateX(-15px);
+
+      }
+
       &:first-child{
          .footer__column{
             &:nth-child(1){
@@ -1651,6 +1667,7 @@
                &:hover{
                   transform: translateX(20px) scale(115%);
                }
+
             }
 
             &:nth-child(2){
@@ -1693,6 +1710,29 @@
 
    &__column {
       transition: 0.25s;
+      flex: 0 0 211px;
+
+      
+      @include breakpoint(1800px){
+         flex: 0 0 155px;
+      }
+      
+      @include breakpoint(1600px){
+         flex: 0 0 120px;
+         transform: none !important;
+      }
+      
+      @include breakpoint(1300px){
+         flex: 0 0 100px;
+      }
+      
+      @include breakpoint(1024px){
+         flex: 0 0 80px;
+      }
+      
+      @include breakpoint(800px){
+         flex: 0 0 70px;
+      }
    }
 }
 
