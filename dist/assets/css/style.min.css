@@ -611,7 +611,7 @@ body {
   width: 95%;
   height: 1569px;
   left: 34px;
-  top: 1226px;
+  top: 1174px;
   /*
      height: 2298px;
      left: 0px;
@@ -698,7 +698,7 @@ body {
   width: 81%;
   height: 1765px;
   left: 0;
-  top: 1215px;
+  top: 1163px;
 }
 @media screen and (max-width: 1800px) {
   .intro__bg-tunnel-shadow {
@@ -783,7 +783,7 @@ body {
   width: 100%;
   height: 2298px;
   left: 0px;
-  top: 702px;
+  top: 650px;
 }
 @media screen and (max-width: 1800px) {
   .intro__bg-tunnel-obj {
@@ -866,7 +866,7 @@ body {
   width: 100%;
   height: 1941px;
   left: 0px;
-  top: 1059px;
+  top: 1007px;
 }
 @media screen and (max-width: 1800px) {
   .intro__bg-stones-shadow {
@@ -951,7 +951,7 @@ body {
   width: 81%;
   height: 1767px;
   left: 0;
-  top: 1217px;
+  top: 1165px;
 }
 @media screen and (max-width: 1800px) {
   .intro__bg-tunnel {
@@ -1036,7 +1036,7 @@ body {
   width: 100%;
   height: 1941px;
   left: 0px;
-  top: 1059px;
+  top: 1007px;
 }
 @media screen and (max-width: 1800px) {
   .intro__bg-stones {
@@ -1129,6 +1129,12 @@ body {
 @media screen and (max-width: 768px) {
   .intro__row {
     display: block;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .intro__row {
+    margin-bottom: 70px;
   }
 }
 .intro__column {
@@ -1833,13 +1839,24 @@ body {
   transform: translateX(-20px) scale(115%);
 }
 .footer__row:last-child .footer__column:nth-child(1) {
-  transform: translateX(30px);
+  transform: translateX(50px);
 }
 .footer__row:last-child .footer__column:nth-child(1):hover {
-  transform: translateX(30px) scale(115%);
+  transform: translateX(50px) scale(115%);
+}
+.footer__row:last-child .footer__column:nth-child(2) {
+  transform: translateX(-15px);
 }
 .footer__row:last-child .footer__column:nth-child(2):hover {
-  transform: scale(115%);
+  transform: translateX(-15px) scale(115%);
+}
+@media screen and (max-width: 1800px) {
+  .footer__row:last-child .footer__column:nth-child(2) {
+    transform: translateX(0px);
+  }
+  .footer__row:last-child .footer__column:nth-child(2):hover {
+    transform: scale(115%);
+  }
 }
 .footer__row:last-child .footer__column:nth-child(3) {
   transform: translateX(-50px);
@@ -1875,5 +1892,15 @@ body {
 @media screen and (max-width: 800px) {
   .footer__column {
     flex: 0 0 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__column {
+    flex: 0 0 150px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer__column {
+    flex: 0 0 120px;
   }
 }
