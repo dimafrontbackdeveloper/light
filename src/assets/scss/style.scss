@@ -6,6 +6,7 @@
    font-weight: normal;
    font-style: normal;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
 
 @import './variables';
@@ -39,7 +40,22 @@
    font-size: 50px;
    line-height: 51px;
    // @include adaptiv-value('height',1080,590,0);
-   height: 1200px;
+
+   @include breakpoint(2560px) {
+      height: 1500px;
+   }
+
+   @include breakpoint(2350px) {
+      height: 1400px;
+   }
+
+   @include breakpoint(2150px) {
+      height: 1300px;
+   }
+
+   @include breakpoint(1920px) {
+      height: 1200px;
+   }
 
    @include breakpoint(1440px) {
       height: 1000px;
@@ -69,99 +85,126 @@
       max-width: none;
    }
 
- 
+
 
    &__bg1 {
-      @include adaptiv-value('width',1350,350,0);
-      @include adaptiv-value('height',498,100,0);
+      @include adaptiv-value('width', 1350, 350, 0);
+      @include adaptiv-value('height', 498, 100, 0);
       bottom: 0;
       left: 0;
       z-index: 10;
+
+
+      @media screen and (min-width:1921px) {
+         @include adaptiv-value('width', 1370, 350, 0);
+      }
    }
 
    &__bg2 {
-      @include adaptiv-value('width',1160,270,0);
-      @include adaptiv-value('height',972,220,0);
+      @include adaptiv-value('width', 1160, 270, 0);
+      @include adaptiv-value('height', 972, 220, 0);
       bottom: 36px;
       right: 0;
       z-index: 9;
-      
-      @include breakpoint(768px){
+
+      @media screen and (min-width:1921px) {
+         bottom: 50px;
+      }
+
+      @include breakpoint(768px) {
          right: -50px;
          bottom: 20px;
       }
-  
+
    }
 
    &__bg3 {
-      @include adaptiv-value('width',1920,665,0);
-      @include adaptiv-value('height',529,150,0);
-      @include adaptiv-value('bottom',205,40,0);
+      @include adaptiv-value('width', 1920, 665, 0);
+      @include adaptiv-value('height', 529, 150, 0);
+      @include adaptiv-value('bottom', 205, 40, 0);
       left: 0;
       z-index: 8;
 
-      @include breakpoint(768px){
-         left: -350px;
-         @include adaptiv-value('bottom',250,70,0);
+      @media screen and (min-width:1921px) {
+         width: 100%;
       }
 
-      @include breakpoint(425px){
+      @include breakpoint(768px) {
+         left: -350px;
+         @include adaptiv-value('bottom', 250, 70, 0);
+      }
+
+      @include breakpoint(425px) {
          left: -300px;
       }
- 
+
    }
 
    &__bg4 {
-      @include adaptiv-value('width',1920,700,0);
-      @include adaptiv-value('height',416,150,0);
-      @include adaptiv-value('bottom',330,80,0);
-      z-index: 7;  
-      
-      @include breakpoint(768px){
+      @include adaptiv-value('width', 1920, 700, 0);
+      @include adaptiv-value('height', 416, 150, 0);
+      @include adaptiv-value('bottom', 330, 80, 0);
+      z-index: 7;
+
+      @media screen and (min-width:1921px) {
+         width: 100%;
+      }
+
+      @include breakpoint(768px) {
          left: -270px;
       }
 
-      @include breakpoint(425px){
+      @include breakpoint(425px) {
          left: -300px;
       }
    }
 
    &__bg5 {
-      @include adaptiv-value('width',1920,360,0);
-      @include adaptiv-value('height',764,200,0);
+      @include adaptiv-value('width', 1920, 360, 0);
+      @include adaptiv-value('height', 764, 200, 0);
       bottom: 139px;
       left: 0;
       z-index: 6;
-      animation: header-an 3s linear infinite;  
+      animation: header-an 3s linear infinite;
 
-      @include breakpoint(768px){
+      @media screen and (min-width:1921px) {
+         width: 100%;
+         bottom: 170px;
+
+      }
+
+      @include breakpoint(768px) {
          bottom: 110px;
       }
    }
 
    &__bg6 {
-      @include adaptiv-value('width',1920,630,0);
-      @include adaptiv-value('height',707,220,0);
-      @include adaptiv-value('bottom',300,150,0);
+      @include adaptiv-value('width', 1920, 630, 0);
+      @include adaptiv-value('height', 707, 220, 0);
+      @include adaptiv-value('bottom', 300, 150, 0);
       left: 0;
       z-index: 5;
 
-      @include breakpoint(425px){
+      @media screen and (min-width:1921px) {
+         width: 100%;
+      }
+
+      @include breakpoint(425px) {
          display: none;
       }
    }
 
    // .header__mountains-mobile1
 
-   &__mountains-mobile{
+   &__mountains-mobile {
       display: none;
       position: absolute;
       z-index: 5;
-      @include adaptiv-value('bottom',300,120,0);
+      @include adaptiv-value('bottom', 300, 120, 0);
       left: -130px;
       max-width: 150%;
 
-      @include breakpoint(425px){
+      @include breakpoint(425px) {
          display: block;
       }
    }
@@ -169,12 +212,17 @@
 
 
    &__bg7 {
-      @include adaptiv-value('width',1920,500,0);
+      @include adaptiv-value('width', 1920, 500, 0);
       height: 100%;
       top: -200px;
       left: 0;
       z-index: 4;
       animation: header-an 5s linear infinite;
+
+      @media screen and (min-width:1921px) {
+         width: 100%;
+         top: -300px;
+      }
 
    }
 
@@ -189,45 +237,50 @@
    }
 
    &__bg8 {
-      @include adaptiv-value('width',1920,870,0);
-      @include adaptiv-value('height',563,200,0);
+      @include adaptiv-value('width', 1920, 870, 0);
+      @include adaptiv-value('height', 563, 200, 0);
       top: 0;
       left: 0;
       z-index: 3;
 
+      @media screen and (min-width:1921px) {
+         width: 100%;
+      }
+
    }
 
    &__bg9 {
-      @include adaptiv-value('width',1920,443,0);
+      @include adaptiv-value('width', 1920, 443, 0);
       height: 100%;
       top: -200px;
       left: 0;
       z-index: 2;
 
+      @media screen and (min-width:1921px) {
+         width: 100%;
+         top: -300px;
+
+      }
+
    }
 
    // .header__nav
 
-   &__nav{
+   &__nav {
       position: relative;
       z-index: 11;
-      @include adaptiv-value('margin-bottom',30,800,0);
       justify-content: center;
 
       @include breakpoint(1440px) {
-         @include adaptiv-value('margin-bottom',50,400,0);
       }
-   
-      @include breakpoint(1024px) {
-      }
+
+      @include breakpoint(1024px) {}
 
       @include breakpoint(768px) {
          justify-content: space-between;
-         @include adaptiv-value('margin-bottom',0,250,0);
       }
 
       @include breakpoint(425px) {
-         margin-bottom: 130px;
       }
 
       ul {
@@ -286,36 +339,43 @@
 
    // .header__nav-item
 
-   &__nav-item{
+   &__nav-item {
       display: none;
 
-      @include breakpoint(768px){
+      @include breakpoint(768px) {
          display: block;
       }
    }
+
    // .header__nav-item-left
 
-   &__nav-item-left{
-      
-   }
+   &__nav-item-left {}
 
    // .header__nav-item-right
 
-   &__nav-item-right{
-
-   }
+   &__nav-item-right {}
 
    // .header__text-right
 
    &__text-right {
-      position: relative;
-      z-index: 11;
-      text-transform: uppercase;
-      justify-content: end;
+      width: 100%;
+
+
+      @include breakpoint(1440px){
+         padding-top: 50px;
+      }
+
+      @include breakpoint(425px){
+         display: block;
+         padding-top: 20px;
+      }
+  
 
       img {
-         @include adaptiv-value('width',275,105,0);
-         @include adaptiv-value('height',70,50,0);
+         @include adaptiv-value('width', 275, 105, 0);
+         @include adaptiv-value('height', 70, 50, 0);
+
+      
       }
    }
 }
@@ -324,83 +384,103 @@
 
    // .intro__bg
 
-   &__bg{
+   &__bg {
       position: absolute;
 
-      @include breakpoint(768px){
+      @include breakpoint(768px) {
          display: none;
       }
-      
+
    }
+
    // .intro__bg-details
 
-   &__bg-details{
+   &__bg-details {
       z-index: 6;
       width: 95%;
       height: 1569px;
       left: 34px;
       top: 1174px;
 
+      @include breakpoint(2560px) {
+         height: 2271px;
+         top: 1300px;
+      }
+
+      @include breakpoint(2350px) {
+         height: 2000px;
+         top: 1284px;
+      }
+
+      @include breakpoint(2150px) {
+         height: 1871px;
+         top: 1150px;
+      }
+
+      @include breakpoint(1920px) {
+         height: 1569px;
+         top: 1174px;
+      }
 
 
-      @include breakpoint(1800px){
+      @include breakpoint(1800px) {
          height: 1371px;
          top: 1214px;
       }
 
-      @include breakpoint(1700px){
+      @include breakpoint(1700px) {
          top: 1170px;
       }
 
-      @include breakpoint(1600px){
+      @include breakpoint(1600px) {
          height: 1271px;
          top: 1200px;
       }
 
-      @include breakpoint(1500px){
+      @include breakpoint(1500px) {
          height: 1171px;
          top: 1220px;
       }
 
-      @include breakpoint(1440px){
+      @include breakpoint(1440px) {
          top: 1020px;
       }
 
-      @include breakpoint(1400px){
+      @include breakpoint(1400px) {
          height: 1100px;
          top: 1020px;
       }
 
-      @include breakpoint(1300px){
+      @include breakpoint(1300px) {
          height: 1050px;
          top: 1010px;
       }
 
-      @include breakpoint(1200px){
+      @include breakpoint(1200px) {
          height: 1000px;
          top: 1000px;
       }
 
-      @include breakpoint(1100px){
+      @include breakpoint(1100px) {
          height: 950px;
          top: 963px;
       }
 
-      @include breakpoint(1024px){
+      @include breakpoint(1024px) {
          top: 890px;
       }
 
-      @include breakpoint(1000px){
+      @include breakpoint(1000px) {
          height: 900px;
          top: 880px;
       }
 
-      @include breakpoint(900px){
+      @include breakpoint(900px) {
          height: 800px;
          top: 890px;
       }
 
-      @include breakpoint(800px){
+      @include breakpoint(800px) {
          height: 730px;
          top: 890px;
       }
@@ -409,75 +489,97 @@
 
    // .intro__bg-tunnel-shadow
 
-   &__bg-tunnel-shadow{
+   &__bg-tunnel-shadow {
       z-index: 5;
       width: 81%;
       height: 1765px;
-     left: 0;
+      left: 0;
       top: 1163px;
 
-      
-      @include breakpoint(1800px){
+      @include breakpoint(2560px) {
+         height: 2380px;
+         top: 1467px;
+      }
+
+      @include breakpoint(2350px) {
+         height: 2160px;
+         top: 1365px;
+      }
+
+      @include breakpoint(2150px) {
+         height: 2000px;
+         top: 1265px;
+      }
+
+
+      @include breakpoint(1920px) {
+         height: 1765px;
+
+         top: 1163px;
+
+      }
+
+      @include breakpoint(1800px) {
          height: 1630px;
          top: 1155px;
       }
 
-      @include breakpoint(1700px){
+      @include breakpoint(1700px) {
          height: 1530px;
          top: 1175px;
       }
 
-      @include breakpoint(1600px){
+      @include breakpoint(1600px) {
          height: 1470px;
          top: 1170px;
       }
 
-      @include breakpoint(1500px){
+      @include breakpoint(1500px) {
          height: 1390px;
          top: 1170px;
       }
 
-      @include breakpoint(1440px){
+      @include breakpoint(1440px) {
          height: 1390px;
          top: 970px;
       }
 
-      @include breakpoint(1400px){
+      @include breakpoint(1400px) {
          height: 1305px;
          top: 983px;
       }
 
-      @include breakpoint(1300px){
+      @include breakpoint(1300px) {
          height: 1230px;
          top: 970px;
       }
 
-      @include breakpoint(1200px){
+      @include breakpoint(1200px) {
          height: 1150px;
          top: 980px;
       }
 
-      @include breakpoint(1100px){
+      @include breakpoint(1100px) {
          height: 1080px;
          top: 965px;
       }
 
-      @include breakpoint(1024px){
+      @include breakpoint(1024px) {
          height: 1072px;
          top: 887px;
       }
 
-      @include breakpoint(1000px){
+      @include breakpoint(1000px) {
          height: 1000px;
          top: 881px;
       }
 
-      @include breakpoint(900px){
+      @include breakpoint(900px) {
          height: 920px;
          top: 881px;
       }
 
-      @include breakpoint(800px){
+      @include breakpoint(800px) {
          height: 850px;
          top: 874px;
       }
@@ -485,73 +587,93 @@
 
    // .intro__bg-tunnel-obj
 
-   &__bg-tunnel-obj{
+   &__bg-tunnel-obj {
       z-index: 4;
       width: 100%;
       height: 2298px;
       left: 0px;
       top: 650px;
 
+      @include breakpoint(2560px) {
+         height: 3100px;
+         top: 770px;
+      }
 
-      @include breakpoint(1800px){
+      @include breakpoint(2350px) {
+         height: 2800px;
+         top: 740px;
+      }
+
+      @include breakpoint(2150px) {
+         height: 2600px;
+         top: 680px;
+      }
+
+
+      @include breakpoint(1920px) {
+         height: 2298px;
+         top: 650px;
+      }
+
+      @include breakpoint(1800px) {
          height: 2100px;
          top: 690px;
       }
 
-      @include breakpoint(1700px){
+      @include breakpoint(1700px) {
          height: 2000px;
          top: 720px;
       }
 
-      @include breakpoint(1600px){
+      @include breakpoint(1600px) {
          height: 1900px;
          top: 750px;
       }
 
-      @include breakpoint(1500px){
+      @include breakpoint(1500px) {
          height: 1800px;
          top: 770px;
       }
 
-      @include breakpoint(1440px){
+      @include breakpoint(1440px) {
          top: 570px;
       }
 
-      @include breakpoint(1400px){
+      @include breakpoint(1400px) {
          height: 1700px;
          top: 600px;
       }
 
-      @include breakpoint(1300px){
+      @include breakpoint(1300px) {
          height: 1600px;
          top: 610px;
       }
 
-      @include breakpoint(1200px){
+      @include breakpoint(1200px) {
          height: 1500px;
          top: 640px;
       }
 
-      @include breakpoint(1100px){
+      @include breakpoint(1100px) {
          height: 1400px;
          top: 653px;
       }
 
-      @include breakpoint(1024px){
+      @include breakpoint(1024px) {
          top: 570px;
       }
 
-      @include breakpoint(1000px){
+      @include breakpoint(1000px) {
          height: 1300px;
          top: 590px;
       }
 
-      @include breakpoint(900px){
+      @include breakpoint(900px) {
          height: 1200px;
          top: 610px;
       }
 
-      @include breakpoint(800px){
+      @include breakpoint(800px) {
          height: 1100px;
          top: 630px;
       }
@@ -559,74 +681,94 @@
 
    // .intro__bg-stones-shadow
 
-   &__bg-stones-shadow{
+   &__bg-stones-shadow {
       z-index: 3;
       width: 100%;
-      height: 1941px;
       left: 0px;
-      top: 1007px;
 
-      @include breakpoint(1800px){
+      @include breakpoint(2560px) {
+         height:2625px ;
+         top:1250px ;
+      }
+
+      @include breakpoint(2350px) {
+         height:2370px ;
+         top: 1170px;
+      }
+
+      @include breakpoint(2150px) {
+         height:2200px ;
+         top: 1080px;
+      }
+      
+      @include breakpoint(1920px) {
+         height: 1941px;
+
+         top: 1007px;
+
+      }
+
+      @include breakpoint(1800px) {
          height: 1770px;
          top: 1019px;
       }
 
-      @include breakpoint(1700px){
+      @include breakpoint(1700px) {
          height: 1690px;
          top: 1030px;
       }
 
-      @include breakpoint(1600px){
+      @include breakpoint(1600px) {
          height: 1605px;
          top: 1045px;
       }
 
-      @include breakpoint(1500px){
+      @include breakpoint(1500px) {
          height: 1520px;
          top: 1050px;
       }
 
-      @include breakpoint(1440px){
+      @include breakpoint(1440px) {
          height: 1520px;
          top: 850px;
       }
 
-      @include breakpoint(1400px){
+      @include breakpoint(1400px) {
          height: 1440px;
          top: 862px;
       }
 
-      @include breakpoint(1300px){
+      @include breakpoint(1300px) {
          height: 1350px;
          top: 860px;
       }
 
-      @include breakpoint(1200px){
+      @include breakpoint(1200px) {
          height: 1270px;
          top: 872px;
       }
 
-      @include breakpoint(1100px){
+      @include breakpoint(1100px) {
          height: 1183px;
          top: 870px;
       }
 
-      @include breakpoint(1024px){
+      @include breakpoint(1024px) {
          height: 1180px;
          top: 787px;
       }
 
-      @include breakpoint(1000px){
+      @include breakpoint(1000px) {
          height: 1096px;
          top: 794px;
       }
 
-      @include breakpoint(900px){
+      @include breakpoint(900px) {
          height: 1014px;
-         top:797px;
+         top: 797px;
       }
 
-      @include breakpoint(800px){
+      @include breakpoint(800px) {
          height: 930px;
          top: 800px;
       }
@@ -634,74 +776,94 @@
 
    // .intro__bg-tunnel
 
-   &__bg-tunnel{
+   &__bg-tunnel {
       z-index: 2;
       width: 81%;
-      height: 1767px;
       left: 0;
-      top: 1165px;
 
-      @include breakpoint(1800px){
+      
+      @include breakpoint(2560px) {
+         height: 2380px;
+         top: 1467px;
+      }
+
+      @include breakpoint(2350px) {
+         height: 2160px;
+         top: 1365px;
+      }
+
+      @include breakpoint(2150px) {
+         height: 2000px;
+         top: 1265px;
+      }
+
+
+      @include breakpoint(1920px) {
+         height: 1767px;
+         top: 1165px;
+      }
+
+      @include breakpoint(1800px) {
          height: 1630px;
          top: 1155px;
       }
 
-      @include breakpoint(1700px){
+      @include breakpoint(1700px) {
          height: 1530px;
          top: 1175px;
       }
 
-      @include breakpoint(1600px){
+      @include breakpoint(1600px) {
          height: 1470px;
          top: 1170px;
       }
 
-      @include breakpoint(1500px){
+      @include breakpoint(1500px) {
          height: 1390px;
          top: 1170px;
       }
 
-      @include breakpoint(1440px){
+      @include breakpoint(1440px) {
          height: 1390px;
          top: 970px;
       }
 
-      @include breakpoint(1400px){
+      @include breakpoint(1400px) {
          height: 1305px;
          top: 983px;
       }
 
-      @include breakpoint(1300px){
+      @include breakpoint(1300px) {
          height: 1230px;
          top: 970px;
       }
 
-      @include breakpoint(1200px){
+      @include breakpoint(1200px) {
          height: 1150px;
          top: 980px;
       }
 
-      @include breakpoint(1100px){
+      @include breakpoint(1100px) {
          height: 1080px;
          top: 965px;
       }
 
-      @include breakpoint(1024px){
+      @include breakpoint(1024px) {
          height: 1072px;
          top: 887px;
       }
 
-      @include breakpoint(1000px){
+      @include breakpoint(1000px) {
          height: 1000px;
          top: 881px;
       }
 
-      @include breakpoint(900px){
+      @include breakpoint(900px) {
          height: 920px;
          top: 881px;
       }
 
-      @include breakpoint(800px){
+      @include breakpoint(800px) {
          height: 850px;
          top: 874px;
       }
@@ -709,74 +871,92 @@
 
    // .intro__bg-stones
 
-   &__bg-stones{
+   &__bg-stones {
       z-index: 1;
       width: 100%;
-      height: 1941px;
       left: 0px;
-      top: 1007px;
 
-      @include breakpoint(1800px){
+      @include breakpoint(2560px) {
+         height:2625px ;
+         top:1250px ;
+      }
+
+      @include breakpoint(2350px) {
+         height:2370px ;
+         top: 1170px;
+      }
+
+      @include breakpoint(2150px) {
+         height:2200px ;
+         top: 1080px;
+      }
+
+      @include breakpoint(1920px) {
+         height: 1941px;
+         top: 1007px;
+      }
+
+      @include breakpoint(1800px) {
          height: 1770px;
          top: 1019px;
       }
 
-      @include breakpoint(1700px){
+      @include breakpoint(1700px) {
          height: 1690px;
          top: 1030px;
       }
 
-      @include breakpoint(1600px){
+      @include breakpoint(1600px) {
          height: 1605px;
          top: 1045px;
       }
 
-      @include breakpoint(1500px){
+      @include breakpoint(1500px) {
          height: 1520px;
          top: 1050px;
       }
 
-      @include breakpoint(1440px){
+      @include breakpoint(1440px) {
          height: 1520px;
          top: 850px;
       }
 
-      @include breakpoint(1400px){
+      @include breakpoint(1400px) {
          height: 1440px;
          top: 862px;
       }
 
-      @include breakpoint(1300px){
+      @include breakpoint(1300px) {
          height: 1350px;
          top: 860px;
       }
 
-      @include breakpoint(1200px){
+      @include breakpoint(1200px) {
          height: 1270px;
          top: 872px;
       }
 
-      @include breakpoint(1100px){
+      @include breakpoint(1100px) {
          height: 1183px;
          top: 870px;
       }
 
-      @include breakpoint(1024px){
+      @include breakpoint(1024px) {
          height: 1180px;
          top: 787px;
       }
 
-      @include breakpoint(1000px){
+      @include breakpoint(1000px) {
          height: 1096px;
          top: 794px;
       }
 
-      @include breakpoint(900px){
+      @include breakpoint(900px) {
          height: 1014px;
-         top:797px;
+         top: 797px;
       }
 
-      @include breakpoint(800px){
+      @include breakpoint(800px) {
          height: 930px;
          top: 800px;
       }
@@ -784,11 +964,11 @@
 
    // .intro__wrapper
 
-   &__wrapper{
+   &__wrapper {
       position: relative;
    }
 
-   .container{
+   .container {
       position: relative;
       z-index: 8;
    }
@@ -798,94 +978,124 @@
    &__row {
       grid-template-columns: repeat(2, 1fr);
 
-      @include breakpoint(768px){
+      @include breakpoint(768px) {
          display: block;
          margin-bottom: 100px;
       }
 
-      @include breakpoint(425px){
+      @include breakpoint(425px) {
          margin-bottom: 70px;
-       }
+      }
    }
 
    // .intro__column
 
    &__column {
-      font-size: 40px;
-      line-height: 41px;
+   
       text-align: justify;
       max-width: 500px;
 
-      @include breakpoint(1024px){
+      @include breakpoint(2560px) {
+         font-size: 60px;
+         line-height: 61px;
+
+         }
+
+      @include breakpoint(1920px) {
+         font-size: 40px;
+         line-height: 41px;
+
+         }
+
+      @include breakpoint(1024px) {
          font-size: 32px;
          line-height: 33px;
          max-width: 350px;
       }
 
-      @include breakpoint(768px){
-         font-family: 'Kirang Haerang',sans-serif;
+      @include breakpoint(768px) {
+         font-family: 'Kirang Haerang', sans-serif;
          font-weight: normal;
          font-size: 30px;
          line-height: 40px;
          text-align: center;
-         padding:0px !important;
+         padding: 0px !important;
          margin-top: 100px;
          max-width: none;
       }
 
- 
+
 
       &:nth-child(1) {
          grid-column: 2/3;
          grid-row: 1/2;
-         padding-bottom: 320px;
 
-         @include breakpoint(1800px){
+         @include breakpoint(2560px) {
+            padding-bottom: 300px;
          }
    
-         @include breakpoint(1700px){
-            padding-bottom: 270px;
-         }
-   
-         @include breakpoint(1600px){
-         }
-   
-         @include breakpoint(1500px){
-         }
-   
-         @include breakpoint(1440px){
+         @include breakpoint(2350px) {
             padding-bottom: 250px;
+            
          }
    
-         @include breakpoint(1400px){
-         padding-bottom: 220px;
+         @include breakpoint(2150px) {
+            padding-bottom: 200px;
+   
+         }
+   
+         @include breakpoint(1920px) {
+            padding-bottom: 320px;
+         }
+
+         @include breakpoint(1800px) {
+            padding-bottom: 250px;
 
          }
-   
-         @include breakpoint(1300px){
+
+         @include breakpoint(1700px) {
          }
-   
-         @include breakpoint(1200px){
-         padding-bottom: 160px;
+
+         @include breakpoint(1600px) {}
+
+         @include breakpoint(1500px) {
+            padding-bottom: 200px;
+
          }
-   
-         @include breakpoint(1100px){
-            padding-bottom: 110px;
+
+         @include breakpoint(1440px) {
          }
-   
-         @include breakpoint(1024px){
-            padding-bottom: 170px;
+
+         @include breakpoint(1400px) {
+
          }
-   
-         @include breakpoint(1000px){
+
+         @include breakpoint(1300px) {
+            padding-bottom: 150px;
          }
-   
-         @include breakpoint(900px){
-         padding-bottom: 120px;
+
+         @include breakpoint(1200px) {
          }
-   
-         @include breakpoint(800px){
-         padding-bottom: 100px;
+
+         @include breakpoint(1100px) {
+            padding-bottom: 100px;
+         }
+
+         @include breakpoint(1024px) {
+            padding-bottom: 150px;
+         }
+
+         @include breakpoint(1000px) {
+            padding-bottom: 120px;
+         }
+
+         @include breakpoint(900px) {
+            padding-bottom: 100px;
+
+         }
+
+         @include breakpoint(800px) {
+            padding-bottom: 70px;
          }
 
       }
@@ -893,49 +1103,64 @@
       &:nth-child(2) {
          grid-column: 1/3;
          grid-row: 2/3;
-         padding-bottom: 130px;
          margin-left: 50px;
 
-         @include breakpoint(1800px){
+         @include breakpoint(2560px) {
+         padding-bottom: 100px;
+
          }
    
-         @include breakpoint(1700px){
+         @include breakpoint(2350px) {
+            padding-bottom: 50px;
+
          }
    
-         @include breakpoint(1600px){
-         }
+         @include breakpoint(2150px) {
    
-         @include breakpoint(1500px){
-         padding-bottom: 80px;
          }
-   
-         @include breakpoint(1440px){
+
+         @include breakpoint(1920px) {
+         padding-bottom: 130px;
+            
          }
-   
-         @include breakpoint(1400px){
-         padding-bottom: 50px;
+
+
+         @include breakpoint(1800px) {}
+
+         @include breakpoint(1700px) {}
+
+         @include breakpoint(1600px) {
+            padding-bottom: 60px;
          }
-   
-         @include breakpoint(1300px){
+
+         @include breakpoint(1500px) {
+            padding-bottom: 80px;
          }
-   
-         @include breakpoint(1200px){
+
+         @include breakpoint(1440px) {}
+
+         @include breakpoint(1400px) {
+            padding-bottom: 50px;
          }
-   
-         @include breakpoint(1100px){
-         }
-   
-         @include breakpoint(1024px){
+
+         @include breakpoint(1300px) {}
+
+         @include breakpoint(1200px) {}
+
+         @include breakpoint(1100px) {}
+
+         @include breakpoint(1024px) {
             margin-left: 0px;
          }
-   
-         @include breakpoint(1000px){
+
+         @include breakpoint(1000px) {}
+
+         @include breakpoint(900px) {
+            padding-bottom: 20px;
+
          }
-   
-         @include breakpoint(900px){
-         }
-   
-         @include breakpoint(800px){
+
+         @include breakpoint(800px) {
          }
 
       }
@@ -943,52 +1168,73 @@
       &:nth-child(3) {
          grid-column: 1/3;
          grid-row: 3/4;
-         padding-bottom: 300px;
 
-         @include breakpoint(1800px){
-         padding-bottom: 200px;
-         }
+         @include breakpoint(2560px) {
+            padding-bottom: 250px;
    
-         @include breakpoint(1700px){
+            }
+      
+            @include breakpoint(2350px) {
+               padding-bottom: 170px; 
+            }
+      
+            @include breakpoint(2150px) {
+               padding-bottom: 110px; 
+      
+            }
+   
+            @include breakpoint(1920px) {
+               padding-bottom: 250px; 
+              
+            }
+
+         @include breakpoint(1800px) {
+            padding-bottom: 200px;
+         }
+
+         @include breakpoint(1700px) {}
+
+         @include breakpoint(1600px) {
+            padding-bottom: 200px; 
 
          }
-   
-         @include breakpoint(1600px){
-         padding-bottom: 150px;
+
+         @include breakpoint(1500px) {
+            padding-bottom: 170px; 
          }
-   
-         @include breakpoint(1500px){
+
+         @include breakpoint(1440px) {}
+
+         @include breakpoint(1400px) {
+            padding-bottom: 150px; 
          }
-   
-         @include breakpoint(1440px){
+
+         @include breakpoint(1300px) {
+            padding-bottom: 130px; 
+
          }
-   
-         @include breakpoint(1400px){
+
+         @include breakpoint(1200px) {
+            padding-bottom: 80px; 
          }
-   
-         @include breakpoint(1300px){
-         padding-bottom: 100px;
+
+         @include breakpoint(1100px) {}
+
+         @include breakpoint(1024px) {
+            padding-bottom: 100px; 
+
          }
-   
-         @include breakpoint(1200px){
+
+         @include breakpoint(1000px) {
+            padding-bottom: 80px; 
+
          }
-   
-         @include breakpoint(1100px){
-         }
-   
-         @include breakpoint(1024px){
-         padding-bottom: 130px;
-         }
-   
-         @include breakpoint(1000px){
-         padding-bottom: 60px;
-         }
-   
-         @include breakpoint(900px){
-         }
-   
-         @include breakpoint(800px){
-         padding-bottom: 30px;
+
+         @include breakpoint(900px) {}
+
+         @include breakpoint(800px) {
+            padding-bottom: 50px; 
+
          }
 
       }
@@ -997,49 +1243,66 @@
          grid-column: 2/3;
          grid-row: 4/5;
          padding-left: 100px;
-         padding-bottom: 100px;
 
-         @include breakpoint(1800px){
-         padding-bottom: 70px;
          
-         }
+         @include breakpoint(2560px) {
+            padding-bottom:80px;
+            }
+      
+            @include breakpoint(2350px) {
+            padding-bottom:50px;
+            }
+      
+            @include breakpoint(2150px) {
+            padding-bottom:30px;
+
+      
+            }
    
-         @include breakpoint(1700px){
+            @include breakpoint(1920px) {
+               padding-bottom: 100px;
+
+              
+            }
+
+         @include breakpoint(1800px) {
+            padding-bottom: 100px;
+
          }
-   
-         @include breakpoint(1600px){
+
+         @include breakpoint(1700px) {
+            padding-bottom: 30px;
          }
-   
-         @include breakpoint(1500px){
+
+         @include breakpoint(1600px) {
+            padding-bottom: 70px;
          }
-   
-         @include breakpoint(1440px){
+
+         @include breakpoint(1500px) {}
+
+         @include breakpoint(1440px) {}
+
+         @include breakpoint(1400px) {}
+
+         @include breakpoint(1300px) {}
+
+         @include breakpoint(1200px) {}
+
+         @include breakpoint(1100px) {
+            padding-bottom: 30px;
          }
-   
-         @include breakpoint(1400px){
+
+         @include breakpoint(1024px) {
+            padding-bottom: 70px;
          }
-   
-         @include breakpoint(1300px){
+
+         @include breakpoint(1000px) {}
+
+         @include breakpoint(900px) {
+            padding-bottom: 20px;
          }
-   
-         @include breakpoint(1200px){
-         }
-   
-         @include breakpoint(1100px){
-         padding-bottom: 40px;
-         }
-   
-         @include breakpoint(1024px){
-         }
-   
-         @include breakpoint(1000px){
-         }
-   
-         @include breakpoint(900px){
-         }
-   
-         @include breakpoint(800px){
-         }
+
+         @include breakpoint(800px) {}
 
 
       }
@@ -1053,68 +1316,91 @@
       position: absolute;
       z-index: 7;
 
-      @include breakpoint(768px){
+      @include breakpoint(768px) {
          display: none;
       }
    }
 
    .lamp1 {
-      top: 60px;
       left: 5%;
-      @include adaptiv-value('width',27,10,0);
-      @include adaptiv-value('height',105,40,0);
+      @include adaptiv-value('width', 27, 10, 0);
+      @include adaptiv-value('height', 105, 40, 0);
 
-      
-      @include breakpoint(1800px){
-      top: 45px;
+      @include breakpoint(2560px) {
+         top: 20px;
       }
 
-      @include breakpoint(1700px){
-      top: 55px;
+      @include breakpoint(2350px) {
+         top: 15px;
       }
 
-      @include breakpoint(1600px){
-      top: 60px;
+      @include breakpoint(2150px) {
+         top: 7px;
       }
 
-      @include breakpoint(1500px){
-      top: 65px;
+      @include breakpoint(1920px) {
+         top: 6px;
       }
 
-      @include breakpoint(1440px){
-      top: 45px;
+      @include breakpoint(1800px) {
+         top: -5px;
+
       }
 
-      @include breakpoint(1400px){
-      top: 40px;
+      @include breakpoint(1700px) {
+         top: 0px;
+
       }
 
-      @include breakpoint(1300px){
-      top: 37px;
+      @include breakpoint(1600px) {
+         top: 8px;
+
       }
 
-      @include breakpoint(1200px){
-      top: 35px;
+      @include breakpoint(1500px) {
+         top: 5px;
       }
 
-      @include breakpoint(1100px){
-      top: 27px;
+      @include breakpoint(1440px) {
+         top: 5px;
+
       }
 
-      @include breakpoint(1024px){
-         top: 45px;
-       
+      @include breakpoint(1400px) {
+         top: 10px;
+
       }
 
-      @include breakpoint(1000px){
-         top: 40px;
+      @include breakpoint(1300px) {
+         top: -5px;
+
       }
 
-      @include breakpoint(900px){
+      @include breakpoint(1200px) {
+         top: 2px;
+
       }
 
-      @include breakpoint(800px){
-         top: 32px;
+      @include breakpoint(1100px) {
+         top: -7px;
+      }
+
+      @include breakpoint(1024px) {
+         top: 7px;
+      }
+
+      @include breakpoint(1000px) {
+         top: 5px;
+      }
+
+      @include breakpoint(900px) {
+         top: 0px;
+
+      }
+
+      @include breakpoint(800px) {
+         top: -3px;
+
       }
 
       img {
@@ -1168,23 +1454,40 @@
    }
 
    .lamp2 {
-      top: 100px;
       left: 17%;
-      @include adaptiv-value('width',142,60,0);
-      @include adaptiv-value('height',102,40,0);
+      @include adaptiv-value('width', 142, 60, 0);
+      @include adaptiv-value('height', 102, 40, 0);
 
-      @include breakpoint(1800px){
+      @include breakpoint(2560px) {
          top: 80px;
       }
 
-      @include breakpoint(1700px){
-         top: 83px;
+      @include breakpoint(2350px) {
+         top: 70px;
       }
 
-      @include breakpoint(1600px){
+      @include breakpoint(2150px) {
+         top: 50px;
+      }
+
+      @include breakpoint(1920px) {
+         top: 50px;
+      }
+
+      @include breakpoint(1800px) {
+         top: 30px;
+      }
+
+      @include breakpoint(1700px) {
+         top: 35px;
+      }
+
+      @include breakpoint(1600px) {
          display: none;
       }
-   
+
+
+
 
       img {
          position: absolute;
@@ -1197,20 +1500,21 @@
             transform: translate(-15px, -20px);
             animation: blick2 8s infinite ease-in-out;
 
-            @include breakpoint(1800px){
-            transform: translate(-12px, -16px);
+            @include breakpoint(1800px) {
+               transform: translate(-12px, -16px);
             }
 
-            @include breakpoint(1700px){
+            @include breakpoint(1700px) {
                transform: translate(-8px, -14px);
-               }
+            }
 
-      
+
          }
 
-       
+
       }
    }
+
    @keyframes blick2 {
 
       0%,
@@ -1233,64 +1537,89 @@
          opacity: 0.1;
       }
    }
+
    .lamp3 {
-      top: 70px;
       left: 33%;
-      @include adaptiv-value('width',36,14,0);
-      @include adaptiv-value('height',133,57,0);
+    
+      @include adaptiv-value('width', 36, 14, 0);
+      @include adaptiv-value('height', 133, 57, 0);
 
-      @include breakpoint(1800px){
-      top: 60px;
-         }
-   
-         @include breakpoint(1700px){
-         }
-   
-         @include breakpoint(1600px){
-         top: 65px;
-         }
-   
-         @include breakpoint(1500px){
-         top: 70px;
-         }
-         @include breakpoint(1440px){
-         top: 55px;
-         }
-   
-         @include breakpoint(1400px){
-         top: 47px;
-         }
-   
-         @include breakpoint(1300px){
-         top: 44px;
+      @include breakpoint(2560px) {
+         top: 27px;
+      }
 
-         }
-   
-         @include breakpoint(1200px){
-         top: 40px;
-         }
-   
-         @include breakpoint(1100px){
-         top: 35px;
+      @include breakpoint(2350px) {
+         top:32px;
+      }
 
-         }
-   
-         @include breakpoint(1024px){
-         top: 55px;
-         }
-   
-         @include breakpoint(1000px){
-         top: 50px;
-         }
-   
-         @include breakpoint(900px){
-         top: 45px;
-         }
-   
-         @include breakpoint(800px){
-         top: 40px;
+      @include breakpoint(2150px) {
+         top: 23px;
+      }
 
-         }
+      @include breakpoint(1920px) {
+         top: 17px;
+      }
+
+      @include breakpoint(1800px) {
+         top: 10px;
+      }
+
+      @include breakpoint(1700px) {}
+
+      @include breakpoint(1600px) {
+         top: 15px;
+      }
+
+      @include breakpoint(1500px) {
+         top: 15px;
+      }
+
+      @include breakpoint(1440px) {
+         top: 13px;
+
+      }
+
+      @include breakpoint(1400px) {
+         top: 17px;
+
+      }
+
+      @include breakpoint(1300px) {
+         top: 5px;
+
+
+      }
+
+      @include breakpoint(1200px) {
+         top: 9px;
+
+      }
+
+      @include breakpoint(1100px) {
+         top: 0px;
+
+
+      }
+
+      @include breakpoint(1024px) {
+         top: 15px;
+
+      }
+
+      @include breakpoint(1000px) {
+         top: 10px;
+      }
+
+      @include breakpoint(900px) {
+         top: 5px;
+
+      }
+
+      @include breakpoint(800px) {
+         top: 0px;
+
+
+      }
 
       img {
          position: absolute;
@@ -1322,9 +1651,10 @@
             }
          }
 
-      
+
       }
    }
+
    @keyframes blick3 {
 
       0%,
@@ -1346,70 +1676,87 @@
          opacity: 0.1;
       }
    }
+
    .lamp4 {
-      top: 730px;
       right: 35%;
-      @include adaptiv-value('width',36,14,0);
-      @include adaptiv-value('height',133,57,0);
+      @include adaptiv-value('width', 36, 14, 0);
+      @include adaptiv-value('height', 133, 57, 0);
 
-
-      @include breakpoint(1800px){
-      top: 660px;
-         
+      @include breakpoint(2560px) {
+         top: 930px;
       }
-      
-            @include breakpoint(1700px){
-      top: 635px;
-            }
-      
-            @include breakpoint(1600px){
-      top: 615px;
 
-            }
-      
-            @include breakpoint(1500px){
-      top: 590px;
-            }
-            @include breakpoint(1440px){
-      top: 570px;
+      @include breakpoint(2350px) {
+         top: 840px;
 
-            }
-      
-            @include breakpoint(1400px){
-      top: 535px;
-            }
-      
-            @include breakpoint(1300px){
-      top: 500px;
-   
-            }
-      
-            @include breakpoint(1200px){
-      top: 470px;
+      }
 
-            }
-      
-            @include breakpoint(1100px){
-      top: 435px;
-   
-            }
-      
-            @include breakpoint(1024px){
-      top: 460px;
+      @include breakpoint(2150px) {
+         top: 770px;
 
-            }
-      
-            @include breakpoint(1000px){
-      top: 423px;
-            }
-      
-            @include breakpoint(900px){
-      top: 390px;
-            }
-      
-            @include breakpoint(800px){
-               top: 355px;
-            }
+      }
+
+      @include breakpoint(1920px) {
+         top: 675px;
+      }
+
+      @include breakpoint(1800px) {
+         top: 610px;
+      }
+
+      @include breakpoint(1700px) {
+         top: 590px;
+      }
+
+      @include breakpoint(1600px) {
+         top: 563px;
+
+      }
+
+      @include breakpoint(1500px) {
+         top: 530px;
+      }
+
+      @include breakpoint(1440px) {
+         top: 530px;
+
+      }
+
+      @include breakpoint(1400px) {
+         top: 510px;
+      }
+
+      @include breakpoint(1300px) {
+         top: 464px;
+
+      }
+
+      @include breakpoint(1200px) {
+         top: 440px;
+
+      }
+
+      @include breakpoint(1100px) {
+         top: 400px;
+
+      }
+
+      @include breakpoint(1024px) {
+         top: 420px;
+
+      }
+
+      @include breakpoint(1000px) {
+         top: 385px;
+      }
+
+      @include breakpoint(900px) {
+         top: 350px;
+      }
+
+      @include breakpoint(800px) {
+         top: 318px;
+      }
 
       img {
          position: absolute;
@@ -1441,9 +1788,10 @@
             }
          }
 
-   
+
       }
    }
+
    @keyframes blick4 {
 
       0%,
@@ -1466,27 +1814,28 @@
          opacity: 0.1;
       }
    }
-   .lamp-type2{
+
+   .lamp-type2 {
       position: absolute;
       display: none;
       z-index: 1;
 
-      @include breakpoint(768px){
+      @include breakpoint(768px) {
          display: block;
       }
    }
 
-   .lamp-type2-1{
-      top: 0;
+   .lamp-type2-1 {
+      top: -100px;
       left: 0;
 
-      img{
-         &:first-child{
+      img {
+         &:first-child {
             position: relative;
             z-index: 2;
          }
 
-         &:last-child{
+         &:last-child {
             position: absolute;
             top: 0;
             left: 0;
@@ -1497,17 +1846,17 @@
       }
    }
 
-   .lamp-type2-2{
-      top: 250px;
+   .lamp-type2-2 {
+      top: 150px;
       right: 0;
 
-      img{
-         &:first-child{
+      img {
+         &:first-child {
             position: relative;
             z-index: 2;
          }
 
-         &:last-child{
+         &:last-child {
             position: absolute;
             top: 0;
             left: 0;
@@ -1518,17 +1867,21 @@
       }
    }
 
-   .lamp-type2-3{
-      top: 500px;
+   .lamp-type2-3 {
+      top: 600px;
       left: 0;
 
-      img{
-         &:first-child{
+      @include breakpoint(415px){
+         top: 650px;
+      }
+
+      img {
+         &:first-child {
             position: relative;
             z-index: 2;
          }
 
-         &:last-child{
+         &:last-child {
             position: absolute;
             top: 0;
             left: 0;
@@ -1539,99 +1892,99 @@
       }
    }
 
-   .stone{
+   .stone {
       position: absolute;
       z-index: 1;
       display: none;
-      
-      @include breakpoint(768px){
+
+      @include breakpoint(768px) {
          display: block;
       }
    }
 
-   .stone1{
+   .stone1 {
       top: 0;
       left: 0;
    }
 
-   .stone2{
+   .stone2 {
       top: 0;
       right: 0;
    }
 
-   .stone3{
+   .stone3 {
       top: 200px;
       left: 0;
    }
 
-   .stone4{
+   .stone4 {
       top: 250px;
       right: 0;
    }
-   
 
-   .stone5{
+
+   .stone5 {
       top: 280px;
       left: 0;
    }
 
-   .stone6{
+   .stone6 {
       top: 280px;
       right: 0;
    }
 
-   .stone7{
+   .stone7 {
       top: 380px;
       right: 0;
    }
 
-   .stone8{
+   .stone8 {
       top: 400px;
       left: 0;
    }
-   
 
-   .stone9{
+
+   .stone9 {
       top: 450px;
       right: 0;
    }
 
-   .stone10{
+   .stone10 {
       top: 500px;
       left: 0;
    }
 
-   .stone11{
+   .stone11 {
       top: 600px;
       right: 0;
    }
 
-   .stone12{
+   .stone12 {
       top: 650px;
       left: 0;
    }
 
-   .stone13{
+   .stone13 {
       top: 700px;
       right: 0;
    }
 
-   .stone14{
+   .stone14 {
       bottom: 0;
       left: 0;
    }
 
-   .stone15{
+   .stone15 {
       bottom: 0;
       left: 0;
       transform: translateX(30%);
    }
 
-   .stone16{
+   .stone16 {
       bottom: 0;
       right: 0;
    }
-   
+
 
 }
 
@@ -1642,72 +1995,83 @@
    // .footer__row
 
    &__row {
-      
-      @include breakpoint(1600px){
+
+      @include breakpoint(1600px) {
          transform: translateX(-30px);
       }
-      
-      @include breakpoint(1400px){
-      }
 
-      @include breakpoint(1024px){
+      @include breakpoint(1400px) {}
+
+      @include breakpoint(1024px) {
          transform: translateX(-15px);
 
       }
 
-      &:first-child{
-         .footer__column{
-            &:nth-child(1){
+      &:first-child {
+         .footer__column {
+      
+
+            &:nth-child(1) {
                transform: translateX(20px);
 
-               &:hover{
+               &:hover {
                   transform: translateX(20px) scale(115%);
                }
 
             }
 
-            &:nth-child(2){
+            &:nth-child(2) {
                transform: translateX(-20px);
 
-               &:hover{
+               &:hover {
                   transform: translateX(-20px) scale(115%);
                }
             }
          }
       }
-      &:last-child{
-         .footer__column{
-            &:nth-child(1){
-               transform: translateX(50px);
 
-               &:hover{
+      &:last-child {
+         .footer__column {
+            &:nth-child(1) {
+
+               @include breakpoint(2560px){
+                  transform: translateX(0px);
+ 
+         }
+
+               @include breakpoint(1920px){
+                  transform: translateX(50px);
+
+         }
+
+               &:hover {
                   transform: translateX(50px) scale(115%);
                }
 
-              
+
 
             }
 
-            &:nth-child(2){
-               transform: translateX(-15px) ;
+            &:nth-child(2) {
+               transform: translateX(-15px);
 
-               &:hover{
+               &:hover {
                   transform: translateX(-15px) scale(115%);
                }
 
-               @include breakpoint(1800px){
-               transform: translateX(0px) ;
+               @include breakpoint(1800px) {
+                  transform: translateX(0px);
 
-               &:hover{
-                  transform:scale(115%);
-               }
+                  &:hover {
+                     transform: scale(115%);
+                  }
                }
             }
 
-            &:nth-child(3){
+            &:nth-child(3) {
                transform: translateX(-50px);
 
-               &:hover{
+               &:hover {
                   transform: translateX(-50px) scale(115%);
                }
             }
@@ -1721,36 +2085,47 @@
       transition: 0.25s;
       flex: 0 0 211px;
 
-      
-      @include breakpoint(1800px){
+
+      @include breakpoint(1800px) {
          flex: 0 0 155px;
       }
-      
-      @include breakpoint(1600px){
+
+      @include breakpoint(1600px) {
          flex: 0 0 120px;
          transform: none !important;
       }
-      
-      @include breakpoint(1300px){
+
+      @include breakpoint(1300px) {
          flex: 0 0 100px;
       }
-      
-      @include breakpoint(1024px){
+
+      @include breakpoint(1024px) {
          flex: 0 0 80px;
       }
-      
-      @include breakpoint(800px){
+
+      @include breakpoint(800px) {
          flex: 0 0 70px;
       }
 
-      @include breakpoint(768px){
+      @include breakpoint(768px) {
          flex: 0 0 150px;
 
-       }
+      }
 
-      @include breakpoint(425px){
+      @include breakpoint(425px) {
          flex: 0 0 120px;
-       }
+      }
+
+      @include breakpoint(2560px){
+               img{
+                  width: 300px;
+               }   
+      }
+
+      @include breakpoint(1920px ){
+               img{
+                  width: auto;
+               }   
+      }
    }
 }
-

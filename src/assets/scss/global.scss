@@ -90,100 +90,115 @@ body {
    user-select: none;
 }
 
-.soc {
-   // .soc __container
+// .soc {
+//    // .soc __container
 
-   &__container {
-      max-width: 530px;
-      margin: 0 auto;
-      padding: 0px 10px;
-      transform: translateX(-60px);
+//    @include breakpoint(2560px) {
+  
+//       }
 
-      @media screen and (max-width: 1024px) {
-         max-width: 768px;
-         margin: 0 auto;
-         transform: translateX(0px);
-      }
+//       @include breakpoint(2350px) {
 
-      @media screen and (max-width: 768px) {
-         max-width: 425px;
-         margin: 0 auto;
-      }
+//       }
+//       @include breakpoint(2150px) {
 
-      @media screen and (max-width: 425px) {
-         max-width: none;
-         margin: 0 auto;
-      }
-   }
+//       }
 
-   // .soc __row
+//       @include breakpoint(1920px) {
+        
+//       }
 
-   &__row {
-      &:first-child{
-         transform: translateY(60px);
+//    &__container {
+//       max-width: 530px;
+//       margin: 0 auto;
+//       padding: 0px 10px;
+//       transform: translateX(-60px);
 
-         .soc__column{
-            &:first-child{
-               transform: translateX(20%);
+//       @media screen and (max-width: 1024px) {
+//          max-width: 768px;
+//          margin: 0 auto;
+//          transform: translateX(0px);
+//       }
 
-               @include breakpoint(1024px){
-                  transform: translateX(10%);
-               }
+//       @media screen and (max-width: 768px) {
+//          max-width: 425px;
+//          margin: 0 auto;
+//       }
 
-               @include breakpoint(768px){
-                  transform: translateX(20%);
-               }
-            }
+//       @media screen and (max-width: 425px) {
+//          max-width: none;
+//          margin: 0 auto;
+//       }
+//    }
+
+//    // .soc __row
+
+//    &__row {
+//       &:first-child{
+//          transform: translateY(60px);
+
+//          .soc__column{
+//             &:first-child{
+//                transform: translateX(20%);
+
+//                @include breakpoint(1024px){
+//                   transform: translateX(10%);
+//                }
+
+//                @include breakpoint(768px){
+//                   transform: translateX(20%);
+//                }
+//             }
       
-            &:last-child{
-               transform: translateX(-20%);
+//             &:last-child{
+//                transform: translateX(-20%);
 
-               @include breakpoint(1024px){
-                  transform: translateX(-10%);
-               }
+//                @include breakpoint(1024px){
+//                   transform: translateX(-10%);
+//                }
 
-               @include breakpoint(768px){
-                  transform: translateX(-20%);
-               }
-            }
-         }
-      }
-      &:last-child{
-         .soc__column{
-            &:first-child{
-               transform: translateX(40%);
-            }
+//                @include breakpoint(768px){
+//                   transform: translateX(-20%);
+//                }
+//             }
+//          }
+//       }
+//       &:last-child{
+//          .soc__column{
+//             &:first-child{
+//                transform: translateX(40%);
+//             }
       
-            &:last-child{
-               transform: translateX(-40%);
-            }
-         }
-      }
-   }
+//             &:last-child{
+//                transform: translateX(-40%);
+//             }
+//          }
+//       }
+//    }
 
-   // .soc __column
+//    // .soc __column
 
-   &__column {
-      transition: 0.2s;
-      flex: 0 0 33%;
+//    &__column {
+//       transition: 0.2s;
+//       flex: 0 0 33%;
 
-      &:hover {
-         transform: scale(105%);
-      }
+//       &:hover {
+//          transform: scale(105%);
+//       }
 
-      a {
-         display: block;
+//       a {
+//          display: block;
 
-         @include breakpoint(1024px) {
-            flex: 0 0 110px;
-         }
+//          @include breakpoint(1024px) {
+//             flex: 0 0 110px;
+//          }
 
-         @include breakpoint(768px) {
-            flex: 0 0 100px;
-         }
-      }
-   }
-}
+//          @include breakpoint(768px) {
+//             flex: 0 0 100px;
+//          }
+//       }
+//    }
+// }
 
 
 
