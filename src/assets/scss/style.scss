@@ -1420,6 +1420,10 @@
             transform: scale(700%);
             animation: blick1 5s infinite ease-in-out;
 
+            @include breakpoint(1100px) {
+               transform: scale(700%) translate(3110px, 0px);
+            }
+
             @include breakpoint(768px) {
                transform: scale(700%) translate(0px, 1px);
             }
