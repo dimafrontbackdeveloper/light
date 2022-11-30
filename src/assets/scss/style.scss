@@ -41,8 +41,7 @@
    line-height: 51px;
 
    @include breakpoint(2560px) {
-      height: 1400px;
-
+      height: 1500px;
    }
 
 
@@ -141,6 +140,7 @@
 
       @media screen and (min-width:1921px) {
          width: 100%;
+         @include adaptiv-value2560-1920('bottom',380,150,0);
       }
 
       @include breakpoint(768px) {
@@ -180,6 +180,7 @@
 
       @media screen and (min-width:1921px) {
          width: 100%;
+         @include adaptiv-value2560-1920('bottom',500,150,0);
       }
 
       @include breakpoint(425px) {
