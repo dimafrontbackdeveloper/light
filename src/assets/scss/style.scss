@@ -33,191 +33,261 @@
 
 .header {
    position: relative;
-   padding-top: 60px;
-   padding-right: 10px;
-   padding-left: 10px;
-   height: 1233px;
-   font-size: 50px;
-   line-height: 51px;
 
-   @include breakpoint(2560px) {
-      height: 1500px;
+
+   @include breakpoint(2560px){
+      @include adaptiv-value2560-1920('height',1690,1260,0);
+      padding-top: 80px;
    }
 
-
-   @include breakpoint(1920px) {
-      height: 1200px;
+   @include breakpoint(1920px){
+      @include adaptiv-value1920-1440('height',1260,950,0);
+      padding-top: 50px;
    }
 
-   @include breakpoint(1440px) {
-      height: 1000px;
-      padding-top: 40px;
+   @include breakpoint(1440px){
+      @include adaptiv-value1440-1024('height',950,680,0);
+      padding-top: 30px;
    }
 
-   @include breakpoint(1024px) {
-      height: 900px;
-      padding-top: 40px;
+   @include breakpoint(1024px){
+      @include adaptiv-value1024-768('height',680,505,0);
    }
 
-   @include breakpoint(768px) {
-      height: 700px;
-      padding-top: 20px;
+   @include breakpoint(768px){
+      @include adaptiv-value768-425('height',505,400,0);
    }
 
-   @include breakpoint(425px) {
-      height: 590px;
+   @include breakpoint(425px){
+      @include adaptiv-value425-375('height',800,705,0);
    }
 
+   @include breakpoint(375px){
+      @include adaptiv-value375-320('height',705,605,0);
+   }
 
+   @include breakpoint(320px){
+      height: 605px;
+   }
 
    // .header__bg
 
    &__bg {
       position: absolute;
       max-width: none;
+
+      @include breakpoint(425px){
+         display: none;
+      }
    }
 
+   // .header__bg-mobile
 
+   &__bg-mobile {
+      display: none;
+
+      @include breakpoint(425px){
+         display: block;
+      }
+   }
 
    &__bg1 {
-      @include adaptiv-value('width', 1350, 350, 0);
-      @include adaptiv-value('height', 498, 100, 0);
+      width: 71%;
       bottom: 0;
       left: 0;
-      z-index: 10;
+      z-index: 9;
 
-
-      @media screen and (min-width:1921px) {
-         @include adaptiv-value('width', 1370, 350, 0);
+      @include breakpoint(425px){
+         width: 100%;
       }
    }
 
    &__bg2 {
-      @include adaptiv-value('width', 1160, 270, 0);
-      @include adaptiv-value('height', 972, 220, 0);
-      bottom: 36px;
-      right: 0;
-      z-index: 9;
+         right: -17px;
+         width: 61%;
+         z-index: 8;
 
-      @media screen and (min-width:1921px) {
-         bottom: 50px;
-      }
+         @include breakpoint(2560px){
+            @include adaptiv-value2560-1920('bottom',55,35,0);
+         }
 
-      @include breakpoint(768px) {
-         right: -50px;
-         bottom: 20px;
-      }
+         @include breakpoint(1920px){
+            @include adaptiv-value1920-1440('bottom',35,26,0);
+            bottom: 35px;
+         }
 
+         @include breakpoint(1440px){
+           bottom: 26px;
+            right: 0;
+         }
+
+         @include breakpoint(1024px){
+            @include adaptiv-value1024-768('bottom',26,15,0);
+            right: -10px;
+         }
+
+         @include breakpoint(768px){
+            @include adaptiv-value768-425('bottom',15,15,0);
+         }
+
+         @include breakpoint(425px){
+            width: 100%;
+            bottom: -5px;
+         }
    }
 
    &__bg3 {
-      @include adaptiv-value('width', 1920, 665, 0);
-      @include adaptiv-value('height', 529, 150, 0);
-      @include adaptiv-value('bottom', 205, 40, 0);
+      z-index: 7;
+      width: 101%;
+
+      @include breakpoint(2560px){
+         left: -5px;
+         @include adaptiv-value2560-1920('bottom',310,234,0);
+      }
+
+      @include breakpoint(1920px){
       left: 0;
-      z-index: 8;
-
-      @media screen and (min-width:1921px) {
-         width: 100%;
+      @include adaptiv-value1920-1440('bottom',234,176,0);
       }
 
-      @include breakpoint(768px) {
-         left: -350px;
-         @include adaptiv-value('bottom', 250, 70, 0);
+      @include breakpoint(1440px){
+      @include adaptiv-value1440-1024('bottom',176,125,0);
       }
 
-      @include breakpoint(425px) {
-         left: -300px;
+      @include breakpoint(1024px){
+      @include adaptiv-value1024-768('bottom',125,90,0);
+      }
+
+      @include breakpoint(768px){
+         @include adaptiv-value768-425('bottom',90,60,0);
+      }
+
+      @include breakpoint(425px){
+       width: 100%;
+       bottom: -15px;
       }
 
    }
 
    &__bg4 {
-      @include adaptiv-value('width', 1920, 700, 0);
-      @include adaptiv-value('height', 416, 150, 0);
-      @include adaptiv-value('bottom', 330, 80, 0);
-      z-index: 7;
+      z-index: 6;
+      width: 100%;
+      right: -10px;
 
-      @media screen and (min-width:1921px) {
+      @include breakpoint(2560px){
+         @include adaptiv-value2560-1920('bottom',407,302,0);
+      }
+
+      @include breakpoint(1920px){
+         @include adaptiv-value1920-1440('bottom',302,230,0);
+      }
+
+      @include breakpoint(1440px){
+         @include adaptiv-value1440-1024('bottom',230,165,0);
+      }
+
+      @include breakpoint(1024px){
+         @include adaptiv-value1024-768('bottom',165,120,0);
+      }
+
+      @include breakpoint(768px){
+         @include adaptiv-value1024-768('bottom',120,100,0);
+      }
+
+      @include breakpoint(425px){
          width: 100%;
-         @include adaptiv-value2560-1920('bottom',380,150,0);
-      }
-
-      @include breakpoint(768px) {
-         left: -270px;
-      }
-
-      @include breakpoint(425px) {
-         left: -300px;
-      }
+         bottom: -25px;
+         left: 0;
+        }
    }
 
    &__bg5 {
-      @include adaptiv-value('width', 1920, 360, 0);
-      @include adaptiv-value('height', 764, 200, 0);
-      bottom: 139px;
       left: 0;
-      z-index: 6;
-      animation: header-an 3s linear infinite;
+      width: 100%;
+      z-index: 5;
 
-      @media screen and (min-width:1921px) {
-         width: 100%;
-         bottom: 170px;
-
+      @include breakpoint(2560px){
+         @include adaptiv-value2560-1920('bottom',230,150,0);
       }
 
-      @include breakpoint(768px) {
-         bottom: 110px;
+      @include breakpoint(1920px){
+         @include adaptiv-value1920-1440('bottom',150,100,0);
+      }
+
+      @include breakpoint(1440px){
+         @include adaptiv-value1440-1024('bottom',100,90,0);
+      }
+
+      @include breakpoint(1024px){
+         @include adaptiv-value1440-1024('bottom',90,70,0);
+      }
+
+      @include breakpoint(768px){
+         @include adaptiv-value1440-1024('bottom',70,60,0);
+      }
+
+      @include breakpoint(425px){
+         bottom: 160px;
+      }
+
+      @include breakpoint(375px){
+         @include adaptiv-value375-320('bottom',160,130,0);
+      }
+
+      @include breakpoint(320px){
+         bottom: 130px;
       }
    }
 
    &__bg6 {
-      @include adaptiv-value('width', 1920, 630, 0);
-      @include adaptiv-value('height', 707, 220, 0);
-      @include adaptiv-value('bottom', 300, 150, 0);
       left: 0;
-      z-index: 5;
+      width: 101%;
+      z-index: 4;
 
-      @media screen and (min-width:1921px) {
-         width: 100%;
-         @include adaptiv-value2560-1920('bottom',500,150,0);
+      @include breakpoint(2560px){
+         @include adaptiv-value2560-1920('bottom',540,400,0);
       }
 
-      @include breakpoint(425px) {
-         display: none;
+      @include breakpoint(1920px){
+         @include adaptiv-value1920-1440('bottom',400,300,0);
+      }
+
+      @include breakpoint(1440px){
+         @include adaptiv-value1440-1024('bottom',300,220,0);
+      }
+
+      @include breakpoint(1024px){
+         @include adaptiv-value1024-768('bottom',220,160,0);
+      }
+
+      @include breakpoint(768px){
+         @include adaptiv-value768-425('bottom',160,110,0);
+      }
+
+      @include breakpoint(425px){
+            width: 100%;
+         @include adaptiv-value425-375('bottom',45,35,0);
+      }
+
+      @include breakpoint(375px){
+            width: 100%;
+            @include adaptiv-value375-320('bottom',35,15,0);
+      }
+
+      @include breakpoint(320px){
+         bottom: 15px;
       }
    }
-
-   // .header__mountains-mobile1
-
-   &__mountains-mobile {
-      display: none;
-      position: absolute;
-      z-index: 5;
-      @include adaptiv-value('bottom', 300, 120, 0);
-      left: -130px;
-      max-width: 150%;
-
-      @include breakpoint(425px) {
-         display: block;
-      }
-   }
-
-
 
    &__bg7 {
-      @include adaptiv-value('width', 1920, 500, 0);
-      height: 100%;
-      top: -200px;
+      top: 0;
       left: 0;
-      z-index: 4;
-      animation: header-an 5s linear infinite;
+      width: 100%;
+      z-index: 3;
 
-      @media screen and (min-width:1921px) {
-         width: 100%;
-         top: -300px;
+      @include breakpoint(425px){
+         top: 100px;
       }
-
    }
 
    @keyframes header-an {
@@ -231,31 +301,17 @@
    }
 
    &__bg8 {
-      @include adaptiv-value('width', 1920, 870, 0);
-      @include adaptiv-value('height', 563, 200, 0);
       top: 0;
       left: 0;
-      z-index: 3;
-
-      @media screen and (min-width:1921px) {
-         width: 100%;
-      }
-
+      width: 100%;
+      z-index: 2;
    }
 
    &__bg9 {
-      @include adaptiv-value('width', 1920, 443, 0);
-      height: 100%;
-      top: -200px;
+      top: 0;
       left: 0;
-      z-index: 2;
-
-      @media screen and (min-width:1921px) {
-         width: 100%;
-         top: -300px;
-
-      }
-
+      width: 100%;
+      z-index: 1;
    }
 
    // .header__nav
@@ -265,17 +321,9 @@
       z-index: 11;
       justify-content: center;
 
-      @include breakpoint(1440px) {
-      }
-
-      @include breakpoint(1024px) {}
-
       @include breakpoint(768px) {
          justify-content: space-between;
-      }
-
-      @include breakpoint(425px) {
-      }
+      }  
 
       ul {
          @include breakpoint(768px) {
@@ -283,8 +331,29 @@
          }
 
          li {
-            margin-right: 70px;
             transition: 0.2s;
+            line-height:100% ;
+
+            @include breakpoint(2560px){
+               margin-right: 150px;
+               font-size: 70px;
+            }
+
+            @include breakpoint(1920px){
+               margin-right: 150px;
+               font-size: 50px;
+            }
+
+            @include breakpoint(1440px){
+               margin-right: 100px;
+            }
+
+            @include breakpoint(1024px){
+               font-size: 40px;
+               margin-right: 60px;
+            }
+
+       
 
 
             &:hover {
@@ -315,13 +384,21 @@
                   margin-right: 0px;
                }
 
-               @include breakpoint(1024px) {
+               @include breakpoint(2560px) {
+                  width: 80px;
+               }
+
+               @include breakpoint(1920px){
                   width: 60px;
                }
 
-               @include breakpoint(768px) {
+               @include breakpoint(1024px){
                   width: 40px;
+                  margin-right: 10px;
                }
+
+
+      
             }
          }
 
@@ -349,19 +426,33 @@
    // .header__text-right
 
    &__text-right {
+      position: absolute;
+      top: 160px;
+      right: 0;
       z-index: 11;
-      width: 100%;
-      padding-top: 100px;
+
+      @include breakpoint(2560px){
+         @include adaptiv-value2560-1920('top', 220, 160, 0);
+      }
+
+      @include breakpoint(1440px){
+         @include adaptiv-value1440-1024('top', 170, 120, 0);
+      }
+
+      @include breakpoint(1024px){
+         @include adaptiv-value1024-768('top', 130, 100, 0);
+      }
+
+      @include breakpoint(768px){
+         @include adaptiv-value768-425('top', 100, 150, 0);
+      }
 
       @include breakpoint(425px){
-         display: block;
-         padding-top: 50px;
+         @include adaptiv-value425-375('top', 300, 290, 0);
       }
-  
 
       img {
-         @include adaptiv-value('width', 275, 105, 0);
-         @include adaptiv-value('height', 70, 50, 0);
+         @include adaptiv-value('width', 290, 105, 0);
       }
    }
 }
@@ -387,19 +478,19 @@
       left: 34px;
 
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',1400,1350,0);
+         @include adaptiv-value2560-1920('top',1650,1200,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',1145,1167,0);
+         @include adaptiv-value1920-1440('top',1200,930,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',956,975,0);
+         @include adaptiv-value1440-1024('top',930,670,0);
       }
 
       @include breakpoint(1024px){
-         @include adaptiv-value1024-768('top',870,877,0);
+         @include adaptiv-value1024-768('top',650,480,0);
       }
 
    }
@@ -412,19 +503,19 @@
       left: 0;
 
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',1355,1335,0);
+         @include adaptiv-value2560-1920('top',1640,1215,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',1145,1167,0);
+         @include adaptiv-value1920-1440('top',1215,917,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',956,975,0);
+         @include adaptiv-value1440-1024('top',917,665,0);
       }
 
       @include breakpoint(1024px){
-         @include adaptiv-value1024-768('top',870,877,0);
+         @include adaptiv-value1024-768('top',655,487,0);
       }
    }
 
@@ -436,19 +527,19 @@
       left: 0px;
 
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',665,820,0);
+         @include adaptiv-value2560-1920('top',950,700,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',630,780,0);
+         @include adaptiv-value1920-1440('top',700,530,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',570,700,0);
+         @include adaptiv-value1440-1024('top',530,390,0);
       }
 
       @include breakpoint(1024px){
-         @include adaptiv-value1024-768('top',595,670,0);
+         @include adaptiv-value1024-768('top',380,280,0);
       }
    }
 
@@ -460,19 +551,19 @@
       left: 0px;
       
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',1144,1177,0);
+         @include adaptiv-value2560-1920('top',1427,1057,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',987,1047,0);
+         @include adaptiv-value1920-1440('top',1057,799,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',839,890,0);
+         @include adaptiv-value1440-1024('top',799,580,0);
       }
 
       @include breakpoint(1024px){
-         @include adaptiv-value1024-768('top',787,813,0);
+         @include adaptiv-value1024-768('top',570,423,0);
       }
 
    }
@@ -485,19 +576,19 @@
       left: 0;
       
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',1355,1335,0);
+         @include adaptiv-value2560-1920('top',1640,1215,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',1145,1167,0);
+         @include adaptiv-value1920-1440('top',1215,917,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',956,975,0);
+         @include adaptiv-value1440-1024('top',917,665,0);
       }
 
       @include breakpoint(1024px){
-         @include adaptiv-value1024-768('top',870,877,0);
+         @include adaptiv-value1024-768('top',655,487,0);
       }
    }
 
@@ -509,19 +600,19 @@
       left: 0px;
 
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',1144,1177,0);
+         @include adaptiv-value2560-1920('top',1427,1057,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',987,1047,0);
+         @include adaptiv-value1920-1440('top',1057,799,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',839,890,0);
+         @include adaptiv-value1440-1024('top',799,580,0);
       }
 
       @include breakpoint(1024px){
-         @include adaptiv-value1024-768('top',787,813,0);
+         @include adaptiv-value1024-768('top',570,423,0);
       }
    }
 
@@ -546,7 +637,7 @@
 
       @include breakpoint(768px) {
          display: block;
-         margin-bottom: 100px;
+         margin-bottom: 50px;
       }
    }
 
@@ -571,13 +662,12 @@
       }
    
       @include breakpoint(768px) {
-         font-family: 'Kirang Haerang', sans-serif;
-         font-weight: normal;
          font-size: 30px;
          line-height: 40px;
          text-align: center;
-         padding: 0px !important;
-         margin-top: 100px;
+         padding-left: 0px !important;
+         padding-top: 100px;
+         margin:0px !important;
          max-width: none;
       }
 
@@ -693,19 +783,19 @@
       @include adaptiv-value('height', 105, 40, 0);
 
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',5,-25,0);
+         @include adaptiv-value2560-1920('top',0,-10,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',-15,-3,0);
+         @include adaptiv-value1920-1440('top',-10,-3,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',-13,-4,0);
+         @include adaptiv-value1440-1024('top',-3,5,0);
       }
 
       @include breakpoint(1024px){
-         top: -8px;
+         @include adaptiv-value1024-768('top',-3,-4,0);
       }
 
 
@@ -724,7 +814,8 @@
             z-index: 1;
             bottom: 17px;
             transform: scale(700%);
-            animation: blick1 5s infinite ease-in-out;
+            animation: blick 5s infinite;
+
 
             @include breakpoint(1100px) {
                transform: scale(700%) translate(3110px, 0px);
@@ -741,26 +832,18 @@
       }
    }
 
-   @keyframes blick1 {
+   @keyframes blick {
 
-      0%,
-      30% {
+      0%{
          opacity: 0.1;
       }
-
-      30%,
       50% {
          opacity: 1;
       }
-
-      50%,
-      80% {
-         opacity: 1;
-      }
-
       100% {
          opacity: 0.1;
       }
+
    }
 
    .lamp2 {
@@ -768,16 +851,16 @@
       @include adaptiv-value('height', 102, 40, 0);
 
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',60,14,0);
+         @include adaptiv-value2560-1920('top',60,30,0);
          @include adaptiv-value2560-1920('left',430,320,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',26,20,0);
+         @include adaptiv-value1920-1440('top',30,20,0);
          @include adaptiv-value1920-1440('left',320,240,0);
       }
 
-      @include breakpoint(1700px) {
+      @include breakpoint(1910px) {
          display: none;
       }
 
@@ -793,7 +876,7 @@
 
          &:last-child {
             transform: translate(-15px, -20px);
-            animation: blick2 8s infinite ease-in-out;
+            animation: blick 8s infinite;
 
             @include breakpoint(1800px) {
                transform: translate(-12px, -16px);
@@ -810,48 +893,25 @@
       }
    }
 
-   @keyframes blick2 {
-
-      0%,
-      10% {
-         opacity: 0.1;
-      }
-
-      10%,
-      40% {
-         opacity: 1;
-      }
-
-      40%,
-      70% {
-         opacity: 1;
-      }
-
-      70%,
-      100% {
-         opacity: 0.1;
-      }
-   }
-
    .lamp3 {
       left: 33%;
       @include adaptiv-value('width', 36, 14, 0);
       @include adaptiv-value('height', 133, 57, 0);
       
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',17,-13,0);
+         @include adaptiv-value2560-1920('top',17,3,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',-3,2,0);
+         @include adaptiv-value1920-1440('top',3,2,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',-4,0,0);
+         @include adaptiv-value1440-1024('top',2,9,0);
       }
 
       @include breakpoint(1024px){
-         top: -4px;
+         top: 0px;
       }
 
       img {
@@ -869,7 +929,8 @@
             z-index: 1;
             bottom: 17px;
             transform: scale(700%) translateX(-1.3px);
-            animation: blick3 8s infinite ease-in-out;
+            animation: blick 5s infinite;
+
 
             @include breakpoint(1024px) {
                transform: scale(700%) translateX(-0.6px);
@@ -885,28 +946,6 @@
          }
 
 
-      }
-   }
-
-   @keyframes blick3 {
-
-      0%,
-      30% {
-         opacity: 0.1;
-      }
-
-      30%,
-      50% {
-         opacity: 1;
-      }
-
-      50%,
-      80% {
-         opacity: 1;
-      }
-
-      100% {
-         opacity: 0.1;
       }
    }
 
@@ -916,19 +955,20 @@
       @include adaptiv-value('height', 133, 57, 0);
 
       @include breakpoint(2560px){
-         @include adaptiv-value2560-1920('top',900,650,0);
+         @include adaptiv-value2560-1920('top',900,670,0);
       }
 
       @include breakpoint(1920px){
-         @include adaptiv-value1920-1440('top',655,502,0);
+         @include adaptiv-value1920-1440('top',670,502,0);
       }
 
       @include breakpoint(1440px){
-         @include adaptiv-value1440-1024('top',490,355,0);
+         @include adaptiv-value1440-1024('top',502,363,0);
       }
 
       @include breakpoint(1024px){
-         @include adaptiv-value1024-768('top',350,263,0);
+         @include adaptiv-value1024-768('top',355,266,0);
+         
 
       }
 
@@ -947,7 +987,7 @@
             z-index: 1;
             bottom: 17px;
             transform: scale(700%) translateX(-1.3px);
-            animation: blick4 5s infinite ease-in-out;
+            animation: blick 4s infinite;
 
             @include breakpoint(1024px) {
                transform: scale(700%) translateX(-0.6px);
@@ -963,29 +1003,6 @@
          }
 
 
-      }
-   }
-
-   @keyframes blick4 {
-
-      0%,
-      10% {
-         opacity: 0.1;
-      }
-
-      10%,
-      30% {
-         opacity: 1;
-      }
-
-      30%,
-      80% {
-         opacity: 1;
-      }
-
-      80%,
-      100% {
-         opacity: 0.1;
       }
    }
 
@@ -1000,7 +1017,7 @@
    }
 
    .lamp-type2-1 {
-      top: -100px;
+      top: -3%;
       left: 0;
 
       img {
@@ -1015,13 +1032,13 @@
             left: 0;
             z-index: 1;
             transform: translateY(10px);
-            animation: blick1 5s infinite ease-in-out;
+            animation: blick 5s infinite ;
          }
       }
    }
 
    .lamp-type2-2 {
-      top: 150px;
+      top: 15%;
       right: 0;
 
       img {
@@ -1036,18 +1053,16 @@
             left: 0;
             z-index: 1;
             transform: translate(10px, 10px);
-            animation: blick3 8s infinite ease-in-out;
+            animation: blick 8s infinite ;
          }
       }
    }
 
    .lamp-type2-3 {
-      top: 600px;
+     top: 55%;
       left: 0;
 
-      @include breakpoint(415px){
-         top: 650px;
-      }
+
 
       img {
          &:first-child {
@@ -1061,7 +1076,7 @@
             left: 0;
             z-index: 1;
             transform: translateY(10px);
-            animation: blick2 8s infinite ease-in-out;
+            animation: blick 6s infinite ;
          }
       }
    }
@@ -1077,69 +1092,70 @@
    }
 
    .stone1 {
-      top: 0;
+      top: 7%;
       left: 0;
    }
 
    .stone2 {
-      top: 0;
+      top: 2%;
       right: 0;
    }
 
    .stone3 {
-      top: 200px;
+      top: 15%;
       left: 0;
    }
 
    .stone4 {
-      top: 250px;
+      top: 20%;
       right: 0;
    }
 
 
    .stone5 {
-      top: 280px;
+      top: 30%;
       left: 0;
    }
 
    .stone6 {
-      top: 280px;
+      top: 35%;
       right: 0;
    }
 
    .stone7 {
-      top: 380px;
+      top: 45%;
       right: 0;
    }
 
    .stone8 {
-      top: 400px;
+      top: 50%;
       left: 0;
    }
 
 
    .stone9 {
-      top: 450px;
+      top: 55%;
       right: 0;
    }
 
    .stone10 {
-      top: 500px;
+      top: 65%;
+
       left: 0;
    }
 
    .stone11 {
-      top: 600px;
+      top: 70%;
       right: 0;
    }
 
    .stone12 {
-      top: 650px;
+      top: 75%;
       left: 0;
    }
 
    .stone13 {
-      top: 700px;
+      top: 80%;
       right: 0;
    }
 
@@ -1165,6 +1181,10 @@
 .footer {
    position: relative;
    z-index: 7;
+
+   @include breakpoint(768px) {
+      padding-bottom: 50px;
+   }
 
    // .footer__row
 
