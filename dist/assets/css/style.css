@@ -683,376 +683,57 @@ body {
 .intro__bg-details {
     z-index: 6;
     width: 95%;
-    height: 1569px;
     left: 34px;
-    top: 1174px;
-}
-
-@media screen and (max-width: 2560px) {
-    .intro__bg-details {
-        height: 2271px;
-        top: 1300px;
-    }
-}
-
-@media screen and (max-width: 2350px) {
-    .intro__bg-details {
-        height: 2000px;
-        top: 1284px;
-    }
-}
-
-@media screen and (max-width: 2150px) {
-    .intro__bg-details {
-        height: 1871px;
-        top: 1150px;
-    }
-}
-
-@media screen and (max-width: 1920px) {
-    .intro__bg-details {
-        height: 1569px;
-        top: 1174px;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .intro__bg-details {
-        height: 1371px;
-        top: 1214px;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .intro__bg-details {
-        top: 1170px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .intro__bg-details {
-        height: 1271px;
-        top: 1200px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .intro__bg-details {
-        height: 1171px;
-        top: 1220px;
-    }
+    top: 1170px;
 }
 
 @media screen and (max-width: 1440px) {
     .intro__bg-details {
-        top: 1020px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .intro__bg-details {
-        height: 1100px;
-        top: 1020px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .intro__bg-details {
-        height: 1050px;
-        top: 1010px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .intro__bg-details {
-        height: 1000px;
-        top: 1000px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .intro__bg-details {
-        height: 950px;
-        top: 963px;
+        top: 960px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .intro__bg-details {
-        top: 890px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .intro__bg-details {
-        height: 900px;
         top: 880px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .intro__bg-details {
-        height: 800px;
-        top: 890px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .intro__bg-details {
-        height: 730px;
-        top: 890px;
     }
 }
 
 .intro__bg-tunnel-shadow {
     z-index: 5;
     width: 81%;
-    height: 1765px;
     left: 0;
-    top: 1163px;
-}
-
-@media screen and (max-width: 2560px) {
-    .intro__bg-tunnel-shadow {
-        height: 2380px;
-        top: 1467px;
-    }
-}
-
-@media screen and (max-width: 2350px) {
-    .intro__bg-tunnel-shadow {
-        height: 2160px;
-        top: 1365px;
-    }
-}
-
-@media screen and (max-width: 2150px) {
-    .intro__bg-tunnel-shadow {
-        height: 2000px;
-        top: 1265px;
-    }
-}
-
-@media screen and (max-width: 1920px) {
-    .intro__bg-tunnel-shadow {
-        height: 1765px;
-        top: 1163px;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .intro__bg-tunnel-shadow {
-        height: 1630px;
-        top: 1155px;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .intro__bg-tunnel-shadow {
-        height: 1530px;
-        top: 1175px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .intro__bg-tunnel-shadow {
-        height: 1470px;
-        top: 1170px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .intro__bg-tunnel-shadow {
-        height: 1390px;
-        top: 1170px;
-    }
+    top: calc(1130px + 35 * ((100vw - 320px) / 1600));
 }
 
 @media screen and (max-width: 1440px) {
     .intro__bg-tunnel-shadow {
-        height: 1390px;
-        top: 970px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .intro__bg-tunnel-shadow {
-        height: 1305px;
-        top: 983px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .intro__bg-tunnel-shadow {
-        height: 1230px;
-        top: 970px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .intro__bg-tunnel-shadow {
-        height: 1150px;
-        top: 980px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .intro__bg-tunnel-shadow {
-        height: 1080px;
-        top: 965px;
+        top: calc(980px + -30 * ((100vw - 320px) / 1600));
     }
 }
 
 @media screen and (max-width: 1024px) {
     .intro__bg-tunnel-shadow {
-        height: 1072px;
-        top: 887px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .intro__bg-tunnel-shadow {
-        height: 1000px;
-        top: 881px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .intro__bg-tunnel-shadow {
-        height: 920px;
-        top: 881px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .intro__bg-tunnel-shadow {
-        height: 850px;
-        top: 874px;
+        top: calc(870px + 18 * ((100vw - 320px) / 1600));
     }
 }
 
 .intro__bg-tunnel-obj {
     z-index: 4;
     width: 100%;
-    height: 2298px;
     left: 0px;
-    top: 650px;
-}
-
-@media screen and (max-width: 2560px) {
-    .intro__bg-tunnel-obj {
-        height: 3100px;
-        top: 770px;
-    }
-}
-
-@media screen and (max-width: 2350px) {
-    .intro__bg-tunnel-obj {
-        height: 2800px;
-        top: 740px;
-    }
-}
-
-@media screen and (max-width: 2150px) {
-    .intro__bg-tunnel-obj {
-        height: 2600px;
-        top: 680px;
-    }
-}
-
-@media screen and (max-width: 1920px) {
-    .intro__bg-tunnel-obj {
-        height: 2298px;
-        top: 650px;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .intro__bg-tunnel-obj {
-        height: 2100px;
-        top: 690px;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .intro__bg-tunnel-obj {
-        height: 2000px;
-        top: 720px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .intro__bg-tunnel-obj {
-        height: 1900px;
-        top: 750px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .intro__bg-tunnel-obj {
-        height: 1800px;
-        top: 770px;
-    }
+    top: calc(1050px + -400 * ((100vw - 320px) / 1600));
 }
 
 @media screen and (max-width: 1440px) {
     .intro__bg-tunnel-obj {
-        top: 570px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .intro__bg-tunnel-obj {
-        height: 1700px;
-        top: 600px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .intro__bg-tunnel-obj {
-        height: 1600px;
-        top: 610px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .intro__bg-tunnel-obj {
-        height: 1500px;
-        top: 640px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .intro__bg-tunnel-obj {
-        height: 1400px;
-        top: 653px;
+        top: calc(900px + -470 * ((100vw - 320px) / 1600));
     }
 }
 
 @media screen and (max-width: 1024px) {
     .intro__bg-tunnel-obj {
-        top: 570px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .intro__bg-tunnel-obj {
-        height: 1300px;
-        top: 590px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .intro__bg-tunnel-obj {
-        height: 1200px;
-        top: 610px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .intro__bg-tunnel-obj {
-        height: 1100px;
-        top: 630px;
+        top: calc(780px + -400 * ((100vw - 320px) / 1600));
     }
 }
 
@@ -1060,249 +741,25 @@ body {
     z-index: 3;
     width: 100%;
     left: 0px;
-}
-
-@media screen and (max-width: 2560px) {
-    .intro__bg-stones-shadow {
-        height: 2625px;
-        top: 1250px;
-    }
-}
-
-@media screen and (max-width: 2350px) {
-    .intro__bg-stones-shadow {
-        height: 2370px;
-        top: 1170px;
-    }
-}
-
-@media screen and (max-width: 2150px) {
-    .intro__bg-stones-shadow {
-        height: 2200px;
-        top: 1080px;
-    }
-}
-
-@media screen and (max-width: 1920px) {
-    .intro__bg-stones-shadow {
-        height: 1941px;
-        top: 1007px;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .intro__bg-stones-shadow {
-        height: 1770px;
-        top: 1019px;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .intro__bg-stones-shadow {
-        height: 1690px;
-        top: 1030px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .intro__bg-stones-shadow {
-        height: 1605px;
-        top: 1045px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .intro__bg-stones-shadow {
-        height: 1520px;
-        top: 1050px;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    .intro__bg-stones-shadow {
-        height: 1520px;
-        top: 850px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .intro__bg-stones-shadow {
-        height: 1440px;
-        top: 862px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .intro__bg-stones-shadow {
-        height: 1350px;
-        top: 860px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .intro__bg-stones-shadow {
-        height: 1270px;
-        top: 872px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .intro__bg-stones-shadow {
-        height: 1183px;
-        top: 870px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .intro__bg-stones-shadow {
-        height: 1180px;
-        top: 787px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .intro__bg-stones-shadow {
-        height: 1096px;
-        top: 794px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .intro__bg-stones-shadow {
-        height: 1014px;
-        top: 797px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .intro__bg-stones-shadow {
-        height: 930px;
-        top: 800px;
-    }
+    top: 1007px;
 }
 
 .intro__bg-tunnel {
     z-index: 2;
     width: 81%;
     left: 0;
-}
-
-@media screen and (max-width: 2560px) {
-    .intro__bg-tunnel {
-        height: 2380px;
-        top: 1467px;
-    }
-}
-
-@media screen and (max-width: 2350px) {
-    .intro__bg-tunnel {
-        height: 2160px;
-        top: 1365px;
-    }
-}
-
-@media screen and (max-width: 2150px) {
-    .intro__bg-tunnel {
-        height: 2000px;
-        top: 1265px;
-    }
-}
-
-@media screen and (max-width: 1920px) {
-    .intro__bg-tunnel {
-        height: 1767px;
-        top: 1165px;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .intro__bg-tunnel {
-        height: 1630px;
-        top: 1155px;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .intro__bg-tunnel {
-        height: 1530px;
-        top: 1175px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .intro__bg-tunnel {
-        height: 1470px;
-        top: 1170px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .intro__bg-tunnel {
-        height: 1390px;
-        top: 1170px;
-    }
+    top: calc(1130px + 35 * ((100vw - 320px) / 1600));
 }
 
 @media screen and (max-width: 1440px) {
     .intro__bg-tunnel {
-        height: 1390px;
-        top: 970px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .intro__bg-tunnel {
-        height: 1305px;
-        top: 983px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .intro__bg-tunnel {
-        height: 1230px;
-        top: 970px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .intro__bg-tunnel {
-        height: 1150px;
-        top: 980px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .intro__bg-tunnel {
-        height: 1080px;
-        top: 965px;
+        top: calc(980px + -30 * ((100vw - 320px) / 1600));
     }
 }
 
 @media screen and (max-width: 1024px) {
     .intro__bg-tunnel {
-        height: 1072px;
-        top: 887px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .intro__bg-tunnel {
-        height: 1000px;
-        top: 881px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .intro__bg-tunnel {
-        height: 920px;
-        top: 881px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .intro__bg-tunnel {
-        height: 850px;
-        top: 874px;
+        top: calc(870px + 18 * ((100vw - 320px) / 1600));
     }
 }
 
@@ -1310,125 +767,8 @@ body {
     z-index: 1;
     width: 100%;
     left: 0px;
-}
-
-@media screen and (max-width: 2560px) {
-    .intro__bg-stones {
-        height: 2625px;
-        top: 1250px;
-    }
-}
-
-@media screen and (max-width: 2350px) {
-    .intro__bg-stones {
-        height: 2370px;
-        top: 1170px;
-    }
-}
-
-@media screen and (max-width: 2150px) {
-    .intro__bg-stones {
-        height: 2200px;
-        top: 1080px;
-    }
-}
-
-@media screen and (max-width: 1920px) {
-    .intro__bg-stones {
-        height: 1941px;
-        top: 1007px;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .intro__bg-stones {
-        height: 1770px;
-        top: 1019px;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .intro__bg-stones {
-        height: 1690px;
-        top: 1030px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .intro__bg-stones {
-        height: 1605px;
-        top: 1045px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .intro__bg-stones {
-        height: 1520px;
-        top: 1050px;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    .intro__bg-stones {
-        height: 1520px;
-        top: 850px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .intro__bg-stones {
-        height: 1440px;
-        top: 862px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .intro__bg-stones {
-        height: 1350px;
-        top: 860px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .intro__bg-stones {
-        height: 1270px;
-        top: 872px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .intro__bg-stones {
-        height: 1183px;
-        top: 870px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .intro__bg-stones {
-        height: 1180px;
-        top: 787px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .intro__bg-stones {
-        height: 1096px;
-        top: 794px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .intro__bg-stones {
-        height: 1014px;
-        top: 797px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .intro__bg-stones {
-        height: 930px;
-        top: 800px;
-    }
+    top: 1007px;
+    top: calc(1110px + -103 * ((100vw - 320px) / 1600));
 }
 
 .intro__wrapper {
