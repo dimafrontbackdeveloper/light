@@ -458,6 +458,8 @@
 }
 
 .intro {
+   overflow: hidden;
+   height: 100%;
 
    // .intro__bg
 
@@ -495,12 +497,46 @@
 
    }
 
-   // .intro__bg-tunnel-shadow
+   // .tunnel-shadow-wrapper
 
-   &__bg-tunnel-shadow {
-      z-index: 5;
+   .tunnel-shadow-wrapper{
+      position: absolute;
+      z-index:2;
       width: 81%;
       left: 0;
+      height: 1762.5px;
+      overflow: hidden;
+
+      &::after{
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+      //   height: 100px;
+      //   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(2,0,36,0) 60%);
+        
+      //   height: 100px;
+      //   background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(2,0,36,0) 70%);
+        
+      //   height: 100px;
+      //   background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(2,0,36,0) 70%);
+
+      // height: 100px;
+      // background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(0,0,0,0.7) 95%, rgba(2,0,36,0.5) 100%);
+
+      // height: 100px;
+      // background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(0,0,0,0.5) 100%);
+
+      // height: 100px;
+      // background: linear-gradient(0deg, rgba(0,0,3,0) 50%, rgba(2,0,36,0.10) 100%);
+
+
+
+
+
+
+      }
 
       @include breakpoint(2560px){
          @include adaptiv-value2560-1920('top',1640,1215,0);
@@ -519,10 +555,36 @@
       }
    }
 
+   // .intro__bg-tunnel-shadow
+
+   &__bg-tunnel-shadow {
+      z-index:2;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+
+      // @include breakpoint(2560px){
+      //    @include adaptiv-value2560-1920('top',1640,1215,0);
+      // }
+
+      // @include breakpoint(1920px){
+      //    @include adaptiv-value1920-1440('top',1215,917,0);
+      // }
+
+      // @include breakpoint(1440px){
+      //    @include adaptiv-value1440-1024('top',917,665,0);
+      // }
+
+      // @include breakpoint(1024px){
+      //    @include adaptiv-value1024-768('top',655,487,0);
+      // }
+   }
+
    // .intro__bg-tunnel-obj
 
    &__bg-tunnel-obj {
-      z-index: 4;
+      z-index: 5;
       width: 100%;
       left: 0px;
 
@@ -546,10 +608,10 @@
    // .intro__bg-stones-shadow
 
    &__bg-stones-shadow {
-      z-index: 3;
+      z-index:4;
       width: 100%;
       left: 0px;
-      
+
       @include breakpoint(2560px){
          @include adaptiv-value2560-1920('top',1427,1057,0);
       }
@@ -571,7 +633,7 @@
    // .intro__bg-tunnel
 
    &__bg-tunnel {
-      z-index: 2;
+      z-index:1;
       width: 81%;
       left: 0;
       
@@ -595,7 +657,7 @@
    // .intro__bg-stones
 
    &__bg-stones {
-      z-index: 1;
+      z-index: 3;
       width: 100%;
       left: 0px;
 
