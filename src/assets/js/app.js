@@ -6,13 +6,13 @@ window.onbeforeunload = function () {
 // find elements
 const tunnelShadowWrapper = document.querySelector('.tunnel-shadow-wrapper');
 const introBgTunnelShadow = document.querySelector('.intro__bg-tunnel-shadow');
-const introRow = document.querySelector('.intro__row');
+const footer = document.querySelector('.footer');
 
 const tunnelShadowRectTop = introBgTunnelShadow.getBoundingClientRect().top; // position of tunnel in the page
-const introRowRectTop = introRow.getBoundingClientRect().top; // position of introRow in the page
+const footerRectTop = footer.getBoundingClientRect().top; // position of introRow in the page
 const delay = window.innerWidth > 1441 ? 300 : window.innerWidth > 1025 ? 200 : 100; // delay before starting animation
 let wrapperHeight = introBgTunnelShadow.clientHeight;
-let introRowHeight = introRow.clientHeight;
+let footerHeight = footer.clientHeight;
 let windowScrollYMorePrevValue = 0;
 
 // initial height for tunnelShadowWrapper
@@ -23,6 +23,8 @@ tunnelShadowWrapper.style.height = `${
 window.addEventListener('scroll', () => {
   // if scroll down
   if (window.scrollY > windowScrollYMorePrevValue) {
+    console.log(-(footerRectTop - window.scrollY - window.innerHeight));
+
     windowScrollYMorePrevValue = window.scrollY;
     // if we scroll tunnel + delay
     if (-(tunnelShadowRectTop - window.scrollY - window.innerHeight) - delay > 0) {
@@ -38,9 +40,8 @@ window.addEventListener('scroll', () => {
       tunnelShadowWrapper.style.height = `${
         wrapperHeight - (tunnelShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
       }px`;
-
-      // if we scroll below introRow, we hide shadow
-      if (-(introRowRectTop - window.scrollY - window.innerHeight) - introRowHeight > 0) {
+      // if we scroll below footer, we hide shadow
+      if (-(footerRectTop - window.scrollY - window.innerHeight) > 0) {
         tunnelShadowWrapper.style.transform = `translateY(${
           (tunnelShadowRectTop - window.scrollY - window.innerHeight + delay) * -1 +
           wrapperHeight -

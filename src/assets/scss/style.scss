@@ -567,7 +567,6 @@
       top: 0;
       transition: 0.4s linear;
 
-
       // @include breakpoint(2560px){
       //    @include adaptiv-value2560-1920('top',1640,1215,0);
       // }
@@ -686,7 +685,6 @@
 
    &__wrapper {
       position: relative;
-      // z-index: 7;
    }
 
    .container {
@@ -697,7 +695,6 @@
    // .intro__row
 
    &__row {
-      transform: translateY(-30px);
       grid-template-columns: repeat(2, 1fr);
 
 
@@ -766,19 +763,19 @@
          margin-left: 50px;
 
          @include breakpoint(2560px){
-            @include adaptiv-value2560-1920('margin-bottom',300,200,0);
+            @include adaptiv-value2560-1920('margin-bottom',270,200,0);
          }
 
          @include breakpoint(1920px){
-            @include adaptiv-value1920-1440('margin-bottom',150,70,0);
+            @include adaptiv-value1920-1440('margin-bottom',120,50,0);
          }
 
          @include breakpoint(1440px){
-            @include adaptiv-value1440-1024('margin-bottom',80,40,0);
+            @include adaptiv-value1440-1024('margin-bottom',60,20,0);
          }
 
          @include breakpoint(1024px){
-            @include adaptiv-value1024-768('margin-bottom',70,20,0);
+            @include adaptiv-value1024-768('margin-bottom',20,0,0);
             margin-left: 0px;
          }
       }
@@ -811,19 +808,19 @@
          padding-left: 100px;
 
          @include breakpoint(2560px){
-            @include adaptiv-value2560-1920('margin-bottom',170,40,0);
+            @include adaptiv-value2560-1920('margin-bottom',190,40,0);
          }
 
          @include breakpoint(1920px){
-            @include adaptiv-value1920-1440('margin-bottom',80,-10,0);
+            @include adaptiv-value1920-1440('margin-bottom',130,-10,0);
          }
 
          @include breakpoint(1440px){
-            @include adaptiv-value1440-1024('margin-bottom',40,-35,0);
+            @include adaptiv-value1440-1024('margin-bottom',90,-10,0);
          }
 
          @include breakpoint(1024px){
-            @include adaptiv-value1024-768('margin-bottom',30,-20,0);
+            @include adaptiv-value1024-768('margin-bottom',90,5,0);
             margin-left: 0px;
          }
          
