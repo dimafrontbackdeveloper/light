@@ -3,7 +3,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
-// find elements
+// // find elements
 const tunnelShadowWrapper = document.querySelector('.tunnel-shadow-wrapper');
 const introBgTunnelShadow = document.querySelector('.intro__bg-tunnel-shadow');
 const footer = document.querySelector('.footer');
@@ -15,9 +15,20 @@ let wrapperHeight = introBgTunnelShadow.clientHeight;
 let footerHeight = footer.clientHeight;
 let windowScrollYMorePrevValue = 0;
 
+const stonesShadowWrapper = document.querySelector('.stones-shadow-wrapper');
+const introBgStonesShadow = document.querySelector('.intro__bg-stones-shadow');
+
+const stonesShadowRectTop = introBgStonesShadow.getBoundingClientRect().top; // position of tunnel in the page
+let stonesWrapperHeight = introBgStonesShadow.clientHeight;
+
 // initial height for tunnelShadowWrapper
 tunnelShadowWrapper.style.height = `${
   wrapperHeight - (tunnelShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
+}px`;
+
+// initial height for tunnelShadowWrapper
+stonesShadowWrapper.style.height = `${
+  stonesWrapperHeight - (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
 }px`;
 
 window.addEventListener('scroll', () => {
@@ -55,6 +66,38 @@ window.addEventListener('scroll', () => {
         }px)`;
 
         tunnelShadowWrapper.style.height = `0px`;
+      }
+    }
+
+    if (-(stonesShadowRectTop - window.scrollY - window.innerHeight) - delay > 0) {
+      // tunnel shadow wrapper go to bottom
+      stonesShadowWrapper.style.transform = `translateY(${
+        (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
+      }px)`;
+      // tunnel shadow go to top
+      introBgStonesShadow.style.transform = `translateY(-${
+        (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
+      }px)`;
+      // decrease tunnelShadowWrapper height because it's will be climb out of the page
+      stonesShadowWrapper.style.height = `${
+        stonesWrapperHeight -
+        (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
+      }px`;
+      // if we scroll below footer, we hide shadow
+      if (-(footerRectTop - window.scrollY - window.innerHeight) > 0) {
+        stonesShadowWrapper.style.transform = `translateY(${
+          (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1 +
+          stonesWrapperHeight -
+          (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
+        }px)`;
+        // tunnel shadow go to top
+        introBgStonesShadow.style.transform = `translateY(-${
+          (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1 +
+          stonesWrapperHeight -
+          (stonesShadowRectTop - window.scrollY - window.innerHeight + delay) * -1
+        }px)`;
+
+        stonesShadowWrapper.style.height = `0px`;
       }
     }
   }

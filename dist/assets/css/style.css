@@ -1048,8 +1048,6 @@ body {
 }
 
 .intro__row {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -1131,25 +1129,25 @@ body {
 
 @media screen and (max-width: 2560px) {
     .intro__column:nth-child(2) {
-        margin-bottom: calc(200px + 100 * ((100vw - 1920px) / 640));
+        margin-bottom: calc(200px + 70 * ((100vw - 1920px) / 640));
     }
 }
 
 @media screen and (max-width: 1920px) {
     .intro__column:nth-child(2) {
-        margin-bottom: calc(70px + 80 * ((100vw - 1440px) / 480));
+        margin-bottom: calc(50px + 70 * ((100vw - 1440px) / 480));
     }
 }
 
 @media screen and (max-width: 1440px) {
     .intro__column:nth-child(2) {
-        margin-bottom: calc(40px + 40 * ((100vw - 1024px) / 416));
+        margin-bottom: calc(20px + 40 * ((100vw - 1024px) / 416));
     }
 }
 
 @media screen and (max-width: 1024px) {
     .intro__column:nth-child(2) {
-        margin-bottom: calc(20px + 50 * ((100vw - 768px) / 256));
+        margin-bottom: calc(0px + 20 * ((100vw - 768px) / 256));
         margin-left: 0px;
     }
 }
@@ -1192,25 +1190,25 @@ body {
 
 @media screen and (max-width: 2560px) {
     .intro__column:nth-child(4) {
-        margin-bottom: calc(40px + 130 * ((100vw - 1920px) / 640));
+        margin-bottom: calc(40px + 150 * ((100vw - 1920px) / 640));
     }
 }
 
 @media screen and (max-width: 1920px) {
     .intro__column:nth-child(4) {
-        margin-bottom: calc(-10px + 90 * ((100vw - 1440px) / 480));
+        margin-bottom: calc(-10px + 140 * ((100vw - 1440px) / 480));
     }
 }
 
 @media screen and (max-width: 1440px) {
     .intro__column:nth-child(4) {
-        margin-bottom: calc(-35px + 75 * ((100vw - 1024px) / 416));
+        margin-bottom: calc(-10px + 100 * ((100vw - 1024px) / 416));
     }
 }
 
 @media screen and (max-width: 1024px) {
     .intro__column:nth-child(4) {
-        margin-bottom: calc(-20px + 50 * ((100vw - 768px) / 256));
+        margin-bottom: calc(5px + 85 * ((100vw - 768px) / 256));
         margin-left: 0px;
     }
 }
