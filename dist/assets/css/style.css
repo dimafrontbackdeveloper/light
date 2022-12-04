@@ -874,6 +874,7 @@ body {
     left: 0;
     height: 1762.5px;
     overflow: hidden;
+    transition: 0.4s linear;
 }
 
 .intro .tunnel-shadow-wrapper::after {
@@ -882,6 +883,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(11, 3, 9, 0.06) 49%);
 }
 
 @media screen and (max-width: 2560px) {
@@ -913,6 +916,7 @@ body {
     width: 100%;
     left: 0;
     top: 0;
+    transition: 0.4s linear;
 }
 
 .intro__bg-tunnel-obj {
