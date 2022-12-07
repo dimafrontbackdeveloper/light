@@ -418,31 +418,31 @@
 
   &__text-right {
     position: absolute;
-    right: 0;
+    right: 20px;
     z-index: 11;
 
     @include breakpoint(2560px) {
-      @include adaptiv-value2560-1920('top', 260, 200, 0);
+      @include adaptiv-value2560-1920('top', 350, 250, 0);
     }
 
     @include breakpoint(1920px) {
-      @include adaptiv-value1440-1024('top', 160, 120, 0);
+      @include adaptiv-value1440-1024('top', 210, 170, 0);
     }
 
     @include breakpoint(1440px) {
-      @include adaptiv-value1440-1024('top', 170, 120, 0);
+      @include adaptiv-value1440-1024('top', 210, 140, 0);
     }
 
     @include breakpoint(1024px) {
-      @include adaptiv-value1024-768('top', 130, 100, 0);
+      @include adaptiv-value1024-768('top', 150, 120, 0);
     }
 
     @include breakpoint(768px) {
-      @include adaptiv-value768-425('top', 110, 160, 0);
+      @include adaptiv-value768-425('top', 110, 180, 0);
     }
 
     @include breakpoint(425px) {
-      @include adaptiv-value425-375('top', 320, 295, 0);
+      @include adaptiv-value425-375('top', 350, 320, 0);
     }
 
     img {
