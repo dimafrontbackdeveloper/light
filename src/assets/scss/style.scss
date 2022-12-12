@@ -201,6 +201,7 @@
     left: 0;
     width: 100%;
     z-index: 5;
+    animation:header-an 3s infinite linear;
 
     @include breakpoint(2560px) {
       @include adaptiv-value2560-1920('bottom', 230, 150, 0);
@@ -280,6 +281,8 @@
     left: 0;
     width: 100%;
     z-index: 3;
+    animation:header-an 5s infinite linear;
+
 
     @include breakpoint(425px) {
       top: 100px;
@@ -622,7 +625,7 @@
   &__column {
     text-align: justify;
     max-width: 500px;
-    font-size: 40px;
+    font-size: 41px;
     line-height: 41px;
 
     @include breakpoint(1440px) {
@@ -637,7 +640,7 @@
     }
 
     @include breakpoint(768px) {
-      font-size: 30px;
+      font-size: 34px;
       line-height: 40px;
       text-align: center;
       padding-left: 0px !important;
@@ -699,15 +702,15 @@
       }
 
       @include breakpoint(1920px) {
-        @include adaptiv-value1920-1440('margin-bottom', 260, 140, 0);
+        @include adaptiv-value1920-1440('margin-bottom', 300, 170, 0);
       }
 
       @include breakpoint(1440px) {
-        @include adaptiv-value1440-1024('margin-bottom', 180, 70, 0);
+        @include adaptiv-value1440-1024('margin-bottom', 220, 100, 0);
       }
 
       @include breakpoint(1024px) {
-        @include adaptiv-value1024-768('margin-bottom', 140, 70, 0);
+        @include adaptiv-value1024-768('margin-bottom', 180, 85, 0);
         margin-left: 0px;
       }
     }
@@ -715,22 +718,22 @@
     &:nth-child(4) {
       grid-column: 2/3;
       grid-row: 4/5;
-      padding-left: 100px;
+      // padding-left: 100px;
 
       @include breakpoint(2560px) {
-        @include adaptiv-value2560-1920('margin-bottom', 190, 40, 0);
+        @include adaptiv-value2560-1920('margin-bottom', 190, 90, 0);
       }
 
       @include breakpoint(1920px) {
-        @include adaptiv-value1920-1440('margin-bottom', 130, -10, 0);
+        @include adaptiv-value1920-1440('margin-bottom', 130, 20, 0);
       }
 
       @include breakpoint(1440px) {
-        @include adaptiv-value1440-1024('margin-bottom', 90, -10, 0);
+        @include adaptiv-value1440-1024('margin-bottom', 70, -2, 0);
       }
 
       @include breakpoint(1024px) {
-        @include adaptiv-value1024-768('margin-bottom', 90, 5, 0);
+        @include adaptiv-value1024-768('margin-bottom', 70, 20, 0);
         margin-left: 0px;
       }
     }
