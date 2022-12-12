@@ -333,6 +333,13 @@
         transition: 0.2s;
         line-height: 100%;
 
+        &:hover {
+          transform: scale(110%) !important;
+        }
+        &:last-child {
+          margin-right: 0px;
+        }
+
         @include breakpoint(2560px) {
           margin-right: 150px;
           font-size: 70px;
@@ -350,14 +357,6 @@
         @include breakpoint(1024px) {
           font-size: 40px;
           margin-right: 60px;
-        }
-
-        &:hover {
-          transform: scale(105%);
-        }
-
-        &:last-child {
-          margin-right: 0px;
         }
 
         @include breakpoint(768px) {
